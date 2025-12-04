@@ -28,7 +28,7 @@ Team "1" --> "0..*" Player : has >
 
 Player "1" --> "1" Club : belongs to >
 
-Player "1" --> "0..*" Stats : stats >
+Player "1" --> "0..*" Stats : generates >
 
 League "1" --> "0..*" Team : includes >
 

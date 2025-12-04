@@ -1,0 +1,96 @@
+@startuml
+!pragma layout smetana
+
+class User {
+  - userId: int
+  - name: String
+
+  + createTeam(name: String)
+  + joinLeague(league)
+}
+
+class Team {
+  - teamId: int
+  - name: String
+  - budget: int
+
+  + addPlayer(player: Player)
+  + removePlayer(player: Player)
+  + calculateTeamPoints(week: int)
+}
+
+class Player {
+  - playerId: int
+  - name: String
+  - position: Position
+  - value: int
+}
+
+class Club {
+  - clubId: int
+  - name: String
+}
+
+class Position {
+  - name: String
+}
+
+class League {
+  - leagueId: int
+  - name: String
+
+  + addTeam(team: Team)
+  + advanceToNextWeek()
+}
+
+class GameWeek {
+  - weekNumber: int
+
+  + closeWeek()
+}
+
+class PlayerStats {
+  - goals: int
+  - assists: int
+  - yellowCards: int
+  - minutesPlayed: int
+  - cleanSheets: boolean
+
+  + calculatePlayerPoints(rules: PointsRuleSet): PlayerPoints
+}
+
+class PlayerPoints {
+  - total: int
+}
+
+class TeamPoints {
+  - total: int
+}
+
+class PointsRuleSet {
+  - goalPoints: int
+  - assistPoints: int
+  - yellowCardPenalty: int
+
+  + int calculatePoints(stats: PlayerStats)
+}
+
+User "1" --> "0..*" Team : >
+League "1" --> "0..*" Team : >
+League "1" --> "0..*" GameWeek : >
+
+Team "1" --> "0..*" Player : >
+Player "0..*" --> "1" Club :  >
+
+Player "1" --> "0..*" PlayerStats : >
+GameWeek "1" --> "0..*" PlayerStats : >
+
+PlayerStats "1" --> "1" PlayerPoints : >
+PlayerStats "1" --> "1" PointsRuleSet : >
+
+Team "1" --> "0..*" TeamPoints : >
+GameWeek "1" --> "0..*" TeamPoints : >
+
+Player "1" --> "1" Position : >
+
+@enduml
