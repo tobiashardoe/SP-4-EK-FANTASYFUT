@@ -1,4 +1,4 @@
-@startuml
+    @startuml
 !pragma layout smetana
 
 class User {
