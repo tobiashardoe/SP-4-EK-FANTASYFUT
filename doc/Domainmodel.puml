@@ -1,0 +1,39 @@
+@startuml
+!pragma layout smetana
+
+class User {
+}
+
+class Team {
+}
+
+class Player {
+}
+
+class Club {
+}
+
+class Stats {
+}
+
+class League {
+}
+
+class Game {
+}
+
+User "1" --> "0..*" Team : owns >
+
+Team "1" --> "0..*" Player : has >
+
+Player "1" --> "1" Club : belongs to >
+
+Player "1" --> "0..*" Stats : stats >
+
+League "1" --> "0..*" Team : includes >
+
+League "1" --> "0..*" Game : schedules >
+
+Game "1" --> "0..*" Stats : generates >
+
+@enduml
