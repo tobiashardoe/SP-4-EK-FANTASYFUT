@@ -16,7 +16,7 @@ public class StartController {
 
     @FXML
     private void handleCreateTeam(javafx.event.ActionEvent event) {
-        switchScene(event, "/fxml/create-team.recources.fxml");
+        switchScene(event, "/fxml/create-team.fxml");
     }
     @FXML
     private TitledPane playerSearchPane;
