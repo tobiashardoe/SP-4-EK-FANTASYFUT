@@ -18,15 +18,7 @@ public class StartController {
     private void handleCreateTeam(javafx.event.ActionEvent event) {
         switchScene(event, "/fxml/create-team.fxml");
     }
-    @FXML
-    private TitledPane playerSearchPane;
-    @FXML
-    private void handleAddPlayer(ActionEvent event){
-        if(!playerSearchPane.isVisible()){
-            playerSearchPane.setVisible(true);
-        }
-        playerSearchPane.setExpanded(!playerSearchPane.isExpanded());
-    }
+
 
     @FXML
     private void handleSeeLeague(javafx.event.ActionEvent event) {
@@ -57,4 +49,5 @@ public class StartController {
             e.printStackTrace();
         }
     }
+
 }
