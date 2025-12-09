@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="src" />
+        <module name="fantasyfut" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Maven" target="21" />
+      <module name="src" target="21" />
     </bytecodeTargetLevel>
   </component>
 </project>
