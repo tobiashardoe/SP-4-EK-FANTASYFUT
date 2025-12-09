@@ -5,13 +5,17 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.control.TitledPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 
 import java.io.IOException;
 
 public class StartController {
+
+
 
 
     @FXML
@@ -28,9 +32,20 @@ public class StartController {
         playerSearchPane.setExpanded(!playerSearchPane.isExpanded());
     }
 
+
     @FXML
     private void handleSeeLeague(javafx.event.ActionEvent event) {
-        switchScene(event, "/fxml/league-standings.recources.fxml");
+        switchScene(event, "/fxml/league-standing.fxml");
+
+    }
+
+
+
+    @FXML
+    private void ReturnMenu(ActionEvent event){
+    switchScene(event, "/fxml/start-view.fxml");
+
+
     }
 
 
