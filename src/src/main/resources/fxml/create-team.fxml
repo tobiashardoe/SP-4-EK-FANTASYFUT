@@ -52,7 +52,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpl.gui.StartController">
+<VBox minHeight="-Infinity" minWidth="-Infinity" maxWidth="-Infinity" maxHeight="-Infinity" prefHeight="1920.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpl.gui.StartController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
