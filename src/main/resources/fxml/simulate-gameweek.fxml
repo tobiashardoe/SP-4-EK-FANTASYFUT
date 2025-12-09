@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="fpl.gui.SimulateGameweekController"
+            prefWidth="1200" prefHeight="800">
+
+    <Label text="Simulate Gameweek"
+           layoutX="450" layoutY="40">
+        <font>
+            <Font size="36" />
+        </font>
+    </Label>
+
+    <Button text="Run Simulation"
+            layoutX="500" layoutY="120"
+            prefWidth="200" prefHeight="50"
+            onAction="#handleSimulate" />
+
+    <TableView fx:id="resultsTable"
+               layoutX="150" layoutY="220"
+               prefWidth="900" prefHeight="500">
+
+        <columns>
+            <TableColumn text="Player" prefWidth="300" />
+            <TableColumn text="Club" prefWidth="250" />
+            <TableColumn text="Points" prefWidth="150" />
+        </columns>
+
+    </TableView>
+
+</AnchorPane>
