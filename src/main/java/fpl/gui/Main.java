@@ -12,6 +12,7 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/start-view.fxml"));
         Scene scene = new Scene(loader.load());
         primaryStage.setScene(scene);
+        primaryStage.setMaximized(true);
         primaryStage.setTitle("EK Fantasy");
         primaryStage.show();
     }
