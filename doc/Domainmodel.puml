@@ -22,18 +22,18 @@ class League {
 class Game {
 }
 
-User "1" --> "0..*" Team : owns >
+User "1" --> "0..*" Team : >
 
-Team "1" --> "0..*" Player : has >
+Team "1" --> "0..*" Player : >
 
-Player "1" --> "1" Club : belongs to >
+Player "1" --> "1" Club : >
 
-Player "1" --> "0..*" Stats : generates >
+Player "1" --> "0..*" Stats :>
 
-League "1" --> "0..*" Team : includes >
+League "1" --> "0..*" Team : >
 
-League "1" --> "0..*" Game : schedules >
+League "1" --> "0..*" Game : >
 
-Game "1" --> "0..*" Stats : generates >
+Game "1" --> "0..*" Stats : >
 
 @enduml
