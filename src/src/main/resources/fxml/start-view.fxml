@@ -69,7 +69,7 @@
                   <Font name="System Bold" size="17.0" />
                </font>
             </Button>
-            <Text fill="#141414" layoutX="589.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EUFA FOOTBALL FANTASY " wrappingWidth="741.3367614746094">
+            <Text fill="#141414" layoutX="589.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UEFA FOOTBALL FANTASY " wrappingWidth="741.3367614746094">
                <font>
                   <Font size="57.0" />
                </font>
