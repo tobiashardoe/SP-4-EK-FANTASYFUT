@@ -40,31 +40,31 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpl.gui.StartController">
+<VBox maxHeight="1080" maxWidth="1980" minHeight="1080" minWidth="1980" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpl.gui.StartController">
   <children>
     <AnchorPane maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
             <ImageView fitHeight="1082.0" fitWidth="1930.0">
                <image>
-                  <Image url="@../../../../../../../Downloads/thumb-1920-1401125.jpg" />
+                   <Image url="@images/1401126.jpg"/>
                </image>
             </ImageView>
-            <Button layoutX="809.0" layoutY="307.0" mnemonicParsing="false" onAction="#handleCreateTeam" prefHeight="112.0" prefWidth="302.0" text="CREATE YOUR TEAM" textFill="#151515">
+            <Button layoutX="300" layoutY="307.0" mnemonicParsing="false" onAction="#handleCreateTeam" prefHeight="112.0" prefWidth="502.0" text="CREATE YOUR TEAM" textFill="#151515">
                <font>
                   <Font name="Arial Bold" size="17.0" />
                </font>
             </Button>
-            <Button layoutX="809.0" layoutY="629.0" mnemonicParsing="false" onAction="#handleSeeLeague" prefHeight="112.0" prefWidth="302.0" text="SEE LEAGUE STANDINGS">
+            <Button layoutX="300.0" layoutY="629.0" mnemonicParsing="false" onAction="#handleSeeLeague" prefHeight="112.0" prefWidth="502.0" text="SEE LEAGUE STANDINGS">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Button>
-            <Button layoutX="809.0" layoutY="474.0" mnemonicParsing="false" onAction="#handleSimulateGameweek" prefHeight="112.0" prefWidth="302.0" text="SIMULATE GAMEWEEK">
+            <Button layoutX="300.0" layoutY="474.0" mnemonicParsing="false" onAction="#handleSimulateGameweek" prefHeight="112.0" prefWidth="502.0" text="SIMULATE GAMEWEEK">
                <font>
                   <Font name="Dubai Bold" size="17.0" />
                </font>
             </Button>
-            <Button layoutX="809.0" layoutY="775.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="112.0" prefWidth="302.0" text="EXIT ">
+            <Button layoutX="300.0" layoutY="775.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="112.0" prefWidth="502.0" text="EXIT ">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
