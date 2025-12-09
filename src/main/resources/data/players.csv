@@ -1,115 +1,84 @@
 id,name,position,clubId
 1001,David Raya,GK,1
 1002,Kepa Arrizabalaga,GK,1
-
 1003,William Saliba,CB,1
 1004,Gabriel Magalhães,CB,1
 1005,Piero Hincapié,CB,1
 1006,Cristhian Mosquera,CB,1
-
 1007,Myles Lewis-Skelly,LB,1
 1008,Riccardo Calafiori,LB,1
-
 1009,Jurriën Timber,RB,1
 1010,Ben White,RB,1
-
 1011,Martín Zubimendi,DM,1
 1012,Christian Nørgaard,DM,1
-
 1013,Declan Rice,CM,1
 1014,Mikel Merino,CM,1
-
 1015,Martin Ødegaard,AM,1
 1016,Eberechi Eze,AM,1
 1017,Ethan Nwaneri,AM,1
-
 1018,Gabriel Martinelli,LW,1
 1019,Leandro Trossard,LW,1
-
 1020,Bukayo Saka,RW,1
 1021,Noni Madueke,RW,1
 1022,Max Dowman,RW,1
-
 1023,Viktor Gyökeres,ST,1
 1024,Kai Havertz,ST,1
 1025,Gabriel Jesus,ST,1
-
 2001,Gianluigi Donnarumma,GK,2
 2002,James Trafford,GK,2
 2003,Stefan Ortega,GK,2
 2004,Marcus Bettinelli,GK,2
-
 2005,Josko Gvardiol,CB,2
 2006,Rúben Dias,CB,2
 2007,Abdukodir Khusanov,CB,2
 2008,John Stones,CB,2
 2009,Nathan Aké,CB,2
-
 2010,Rayan Aït-Nouri,LB,2
 2011,Nico O'Reilly,LB,2
-
 2012,Rico Lewis,RB,2
 2013,Matheus Nunes,RB,2
-
 2014,Rodri,DM,2
 2015,Nico González,DM,2
 2016,Kalvin Phillips,DM,2
-
 2017,Tijjani Reijnders,CM,2
 2018,Mateo Kovacic,CM,2
-
 2019,Bernardo Silva,AM,2
-
 2020,Jérémy Doku,LW,2
 2021,Savinho,LW,2
-
 2022,Phil Foden,RW,2
 2023,Rayan Cherki,RW,2
 2024,Oscar Bobb,RW,2
-
 2025,Erling Haaland,ST,2
 2026,Omar Marmoush,ST,2
-
 3001,Giorgi Mamardashvili,GK,3
 3002,Alisson,GK,3
 3003,Freddie Woodman,GK,3
-
 3004,Ibrahima Konaté,CB,3
 3005,Giovanni Leoni,CB,3
 3006,Virgil van Dijk,CB,3
 3007,Joe Gomez,CB,3
 3008,Rhys Williams,CB,3
-
 3009,Milos Kerkez,LB,3
 3010,Andrew Robertson,LB,3
-
 3011,Jeremie Frimpong,RB,3
 3012,Conor Bradley,RB,3
-
 3013,Ryan Gravenberch,DM,3
 3014,Stefan Bajcetic,DM,3
 3015,Wataru Endo,DM,3
-
 3016,Alexis Mac Allister,CM,3
 3017,Curtis Jones,CM,3
 3018,Trey Nyoni,CM,3
-
 3019,Florian Wirtz,AM,3
 3020,Dominik Szoboszlai,AM,3
-
 3021,Cody Gakpo,LW,3
 3022,Rio Ngumoha,LW,3
-
 3023,Mohamed Salah,RW,3
 3024,Federico Chiesa,RW,3
-
 3025,Alexander Isak,ST,3
 3026,Hugo Ekitiké,ST,3
-
 4001,Robert Sánchez,GK,4
 4002,Filip Jørgensen,GK,4
 4003,Gabriel Slonina,GK,4
-
 4004,Levi Colwill,CB,4
 4005,Trevoh Chalobah,CB,4
 4006,Wesley Fofana,CB,4
@@ -117,402 +86,286 @@ id,name,position,clubId
 4008,Benoît Badiashile,CB,4
 4009,Axel Disasi,CB,4
 4010,Josh Acheampong,CB,4
-
 4011,Marc Cucurella,LB,4
 4012,Jorrel Hato,LB,4
-
 4013,Reece James,RB,4
 4014,Malo Gusto,RB,4
-
 4015,Moisés Caicedo,DM,4
 4016,Roméo Lavia,DM,4
 4017,Dário Essugo,DM,4
-
 4018,Enzo Fernández,CM,4
 4019,Andrey Santos,CM,4
-
 4020,Cole Palmer,AM,4
 4021,Facundo Buonanotte,AM,4
-
 4022,Jamie Gittens,LW,4
 4023,Alejandro Garnacho,LW,4
 4024,Tyrique George,LW,4
 4025,Mykhaylo Mudryk,LW,4
-
 4026,Estêvão,RW,4
 4027,Pedro Neto,RW,4
 4028,Raheem Sterling,RW,4
-
 4029,João Pedro,ST,4
 4030,Liam Delap,ST,4
 4031,Marc Guiu,ST,4
-
-
 5001,Guglielmo Vicario,GK,5
 5002,Antonín Kinský,GK,5
 5003,Brandon Austin,GK,5
-
 5004,Cristian Romero,CB,5
 5005,Micky van de Ven,CB,5
 5006,Radu Drăgușin,CB,5
 5007,Kevin Danso,CB,5
 5008,Ben Davies,CB,5
 5009,Kota Takai,CB,5
-
 5010,Destiny Udogie,LB,5
 5011,Djed Spence,LB,5
-
 5012,Pedro Porro,RB,5
-
 5013,João Palhinha,DM,5
 5014,Yves Bissouma,DM,5
-
 5015,Lucas Bergvall,CM,5
 5016,Archie Gray,CM,5
 5017,Pape Matar Sarr,CM,5
 5018,Rodrigo Bentancur,CM,5
-
 5019,Xavi Simons,AM,5
 5020,Dejan Kulusevski,AM,5
 5021,James Maddison,AM,5
-
 5022,Wilson Odobert,LW,5
-
 5023,Mohammed Kudus,RW,5
 5024,Brennan Johnson,RW,5
-
 5025,Dominic Solanke,ST,5
 5026,Mathys Tel,ST,5
 5027,Randal Kolo Muani,ST,5
 5028,Richarlison,ST,5
 5029,Dane Scarlett,ST,5
-
-
 6001,Joan García,GK,6
 6002,Marc-André ter Stegen,GK,6
 6003,Wojciech Szczesny,GK,6
-
 6004,Pau Cubarsí,CB,6
 6005,Ronald Araujo,CB,6
 6006,Eric García,CB,6
 6007,Andreas Christensen,CB,6
-
 6008,Alejandro Balde,LB,6
 6009,Gerard Martín,LB,6
-
 6010,Jules Koundé,RB,6
-
 6011,Marc Casadó,DM,6
 6012,Marc Bernal,DM,6
-
 6013,Pedri,CM,6
 6014,Frenkie de Jong,CM,6
 6015,Gavi,CM,6
-
 6016,Fermín López,AM,6
 6017,Dani Olmo,AM,6
 6018,Dro Fernández,AM,6
-
 6019,Raphinha,LW,6
 6020,Marcus Rashford,LW,6
-
 6021,Lamine Yamal,RW,6
 6022,Roony Bardghji,RW,6
-
 6023,Ferran Torres,ST,6
 6024,Robert Lewandowski,ST,6
-
-
 7001,Thibaut Courtois,GK,7
 7002,Andriy Lunin,GK,7
-
 7003,Dean Huijsen,CB,7
 7004,Éder Militão,CB,7
 7005,Raúl Asencio,CB,7
 7006,Antonio Rüdiger,CB,7
 7007,David Alaba,CB,7
-
 7008,Álvaro Carreras,LB,7
 7009,Fran García,LB,7
 7010,Ferland Mendy,LB,7
-
 7011,Trent Alexander-Arnold,RB,7
 7012,Daniel Carvajal,RB,7
-
 7013,Aurélien Tchouaméni,DM,7
-
 7014,Federico Valverde,CM,7
 7015,Eduardo Camavinga,CM,7
 7016,Dani Ceballos,CM,7
-
 7017,Jude Bellingham,AM,7
 7018,Arda Güler,AM,7
-
 7019,Vinicius Junior,LW,7
-
 7020,Rodrygo,RW,7
 7021,Franco Mastantuono,RW,7
 7022,Brahim Díaz,RW,7
-
 7023,Kylian Mbappé,ST,7
 7024,Endrick,ST,7
 7025,Gonzalo García,ST,7
-
 8001,Jan Oblak,GK,8
 8002,Juan Musso,GK,8
-
 8003,Robin Le Normand,CB,8
 8004,Dávid Hancko,CB,8
 8005,José María Giménez,CB,8
 8006,Clément Lenglet,CB,8
-
 8007,Matteo Ruggeri,LB,8
 8008,Javi Galán,LB,8
-
 8009,Marcos Llorente,RB,8
 8010,Nahuel Molina,RB,8
 8011,Marc Pubill,RB,8
-
 8012,Johnny Cardoso,DM,8
-
 8013,Pablo Barrios,CM,8
 8014,Conor Gallagher,CM,8
 8015,Koke,CM,8
-
 8016,Álex Baena,LW,8
 8017,Thiago Almada,LW,8
 8018,Nico González,LW,8
 8019,Carlos Martín,LW,8
-
 8020,Giuliano Simeone,RW,8
-
 8021,Giacomo Raspadori,SS,8
 8022,Antoine Griezmann,SS,8
-
 8023,Julián Alvarez,ST,8
 8024,Alexander Sørloth,ST,8
-
-
 9001,Luiz Júnior,GK,9
 9002,Diego Conde,GK,9
 9003,Arnau Tenas,GK,9
-
 9004,Renato Veiga,CB,9
 9005,Logan Costa,CB,9
 9006,Juan Foyth,CB,9
 9007,Rafa Marín,CB,9
 9008,Willy Kambwala,CB,9
-
 9009,Sergi Cardona,LB,9
 9010,Alfonso Pedraza,LB,9
-
 9011,Santiago Mouriño,RB,9
 9012,Pau Navarro,RB,9
 9013,Adrià Altimira,RB,9
-
 9014,Pape Gueye,DM,9
 9015,Thomas Partey,DM,9
-
 9016,Santi Comesaña,CM,9
 9017,Dani Parejo,CM,9
-
 9018,Alberto Moleiro,LW,9
 9019,Manor Solomon,LW,9
-
 9020,Ilias Akhomach,RW,9
 9021,Tajon Buchanan,RW,9
 9022,Nicolas Pépé,RW,9
-
 9023,Georges Mikautadze,ST,9
 9024,Tani Oluwaseyi,ST,9
 9025,Ayoze Pérez,ST,9
 9026,Gerard Moreno,ST,9
 9027,Pau Cabanes,ST,9
-
-
 10001,Josep Martínez,GK,10
 10002,Yann Sommer,GK,10
 10003,Raffaele Di Gennaro,GK,10
-
 10004,Alessandro Bastoni,CB,10
 10005,Yann Bisseck,CB,10
 10006,Manuel Akanji,CB,10
 10007,Stefan de Vrij,CB,10
 10008,Tomás Palacios,CB,10
 10009,Francesco Acerbi,CB,10
-
 10010,Federico Dimarco,LB,10
 10011,Carlos Augusto,LB,10
-
 10012,Denzel Dumfries,RB,10
 10013,Matteo Darmian,RB,10
-
 10014,Hakan Çalhanoğlu,DM,10
-
 10015,Nicolò Barella,CM,10
 10016,Davide Frattesi,CM,10
 10017,Petar Sučić,CM,10
 10018,Andy Diouf,CM,10
 10019,Piotr Zieliński,CM,10
 10020,Henrikh Mkhitaryan,CM,10
-
 10021,Luis Henrique,RM,10
-
 10022,Lautaro Martínez,ST,10
 10023,Marcus Thuram,ST,10
 10024,Pio Esposito,ST,10
 10025,Ange-Yoan Bonny,ST,10
-
-
 11001,Mike Maignan,GK,11
 11002,Pietro Terracciano,GK,11
 11003,Lorenzo Torriani,GK,11
-
 11004,Koni De Winter,CB,11
 11005,Fikayo Tomori,CB,11
 11006,Strahinja Pavlović,CB,11
 11007,Matteo Gabbia,CB,11
 11008,David Odogu,CB,11
-
 11009,Pervis Estupiñán,LB,11
 11010,Davide Bartesaghi,LB,11
-
 11011,Zachary Athekame,RB,11
-
 11012,Ardon Jashari,DM,11
 11013,Youssouf Fofana,DM,11
 11014,Samuele Ricci,DM,11
-
 11015,Adrien Rabiot,CM,11
 11016,Ruben Loftus-Cheek,CM,11
 11017,Luka Modrić,CM,11
-
 11018,Alexis Saelemaekers,RM,11
-
 11019,Rafael Leão,LW,11
-
 11020,Christian Pulisic,RW,11
-
 11021,Christopher Nkunku,ST,11
 11022,Santiago Gimenez,ST,11
-
 12001,Alex Meret,GK,12
 12002,Vanja Milinković-Savić,GK,12
 12003,Nikita Contini,GK,12
 12004,Mathias Ferrante,GK,12
-
 12005,Alessandro Buongiorno,CB,12
 12006,Sam Beukema,CB,12
 12007,Amir Rrahmani,CB,12
 12008,Luca Marianucci,CB,12
 12009,Juan Jesus,CB,12
-
 12010,Miguel Gutiérrez,LB,12
 12011,Mathías Olivera,LB,12
 12012,Leonardo Spinazzola,LB,12
-
 12013,Giovanni Di Lorenzo,RB,12
 12014,Pasquale Mazzocchi,RB,12
-
 12015,Stanislav Lobotka,DM,12
 12016,Billy Gilmour,DM,12
-
 12017,Scott McTominay,CM,12
 12018,Frank Anguissa,CM,12
-
 12019,Kevin De Bruyne,AM,12
 12020,Eljif Elmas,AM,12
 12021,Antonio Vergara,AM,12
-
 12022,Noa Lang,LW,12
-
 12023,David Neres,RW,12
 12024,Matteo Politano,RW,12
-
 12025,Rasmus Højlund,ST,12
 12026,Lorenzo Lucca,ST,12
 12027,Romelu Lukaku,ST,12
 12028,Giuseppe Ambrosino,ST,12
-
 13001,Michele Di Gregorio,GK,13
 13002,Mattia Perin,GK,13
 13003,Carlo Pinsoglio,GK,13
-
 13004,Bremer,CB,13
 13005,Pierre Kalulu,CB,13
 13006,Federico Gatti,CB,13
 13007,Lloyd Kelly,CB,13
 13008,Daniele Rugani,CB,13
-
 13009,Juan Cabal,LB,13
 13010,Jonas Rouhi,LB,13
-
 13011,Manuel Locatelli,DM,13
-
 13012,Khéphren Thuram,CM,13
 13013,Weston McKennie,CM,13
 13014,Fabio Miretti,CM,13
-
 13015,João Mário,RM,13
-
 13016,Andrea Cambiaso,LM,13
 13017,Filip Kostić,LM,13
-
 13018,Teun Koopmeiners,AM,13
 13019,Vasilije Adžić,AM,13
-
 13020,Kenan Yıldız,LW,13
-
 13021,Francisco Conceição,RW,13
 13022,Edon Zhegrova,RW,13
-
 13023,Loïs Openda,ST,13
 13024,Jonathan David,ST,13
 13025,Dušan Vlahović,ST,13
 13026,Arkadiusz Milik,ST,13
-
 14001,Jonas Urbig,GK,14
 14002,Manuel Neuer,GK,14
 14003,Sven Ulreich,GK,14
 14004,Leon Klanac,GK,14
-
 14005,Dayot Upamecano,CB,14
 14006,Min-jae Kim,CB,14
 14007,Jonathan Tah,CB,14
 14008,Hiroki Ito,CB,14
-
 14009,Alphonso Davies,LB,14
 14010,Raphaël Guerreiro,LB,14
-
 14011,Josip Stanisic,RB,14
 14012,Konrad Laimer,RB,14
 14013,Sacha Boey,RB,14
-
 14014,Aleksandar Pavlovic,DM,14
 14015,Joshua Kimmich,DM,14
-
 14016,Tom Bischof,CM,14
 14017,Leon Goretzka,CM,14
-
 14018,Jamal Musiala,AM,14
 14019,Lennart Karl,AM,14
-
 14020,Luis Díaz,LW,14
 14021,Wisdom Mike,LW,14
-
 14022,Michael Olise,RW,14
-
 14023,Serge Gnabry,SS,14
-
 14024,Harry Kane,ST,14
 14025,Nicolas Jackson,ST,14
-
-
 15001,Gregor Kobel,GK,15
 15002,Alexander Meyer,GK,15
 15003,Patrick Drewes,GK,15
 15004,Silas Ostrzinski,GK,15
-
 15005,Nico Schlotterbeck,CB,15
 15006,Waldemar Anton,CB,15
 15007,Niklas Süle,CB,15
@@ -520,213 +373,154 @@ id,name,position,clubId
 15009,Ramy Bensebaini,CB,15
 15010,Emre Can,CB,15
 15011,Filippo Mane,CB,15
-
 15012,Daniel Svensson,LB,15
 15013,Almugera Kabar,LB,15
-
 15014,Julian Ryerson,RB,15
-
 15015,Salih Özcan,DM,15
-
 15016,Felix Nmecha,CM,15
 15017,Jobe Bellingham,CM,15
 15018,Carney Chukwuemeka,CM,15
 15019,Marcel Sabitzer,CM,15
 15020,Paskal Groß,CM,15
-
 15021,Yan Couto,RM,15
-
 15022,Julian Brandt,AM,15
-
 15023,Julien Duranville,LW,15
-
 15024,Karim Adeyemi,RW,15
 15025,Cole Campbell,RW,15
-
 15026,Serhou Guirassy,ST,15
 15027,Maximilian Beier,ST,15
 15028,Fábio Silva,ST,15
-
 16001,Mark Flekken,GK,16
 16002,Janis Blaswich,GK,16
 16003,Niklas Lomb,GK,16
-
 16004,Jarell Quansah,CB,16
 16005,Edmond Tapsoba,CB,16
 16006,Loïc Badé,CB,16
 16007,Jeanuël Belocian,CB,16
 16008,Axel Tape,CB,16
-
 16009,Alejandro Grimaldo,LB,16
-
 16010,Arthur,RB,16
 16011,Lucas Vázquez,RB,16
-
 16012,Equi Fernández,DM,16
 16013,Robert Andrich,DM,16
-
 16014,Exequiel Palacios,CM,16
 16015,Aleix García,CM,16
-
 16016,Malik Tillman,AM,16
 16017,Claudio Echeverri,AM,16
 16018,Ibrahim Maza,AM,16
 16019,Jonas Hofmann,AM,16
-
 16020,Eliesse Ben Seghir,LW,16
 16021,Martin Terrier,LW,16
-
 16022,Nathan Tella,RW,16
 16023,Ernest Poku,RW,16
-
 16024,Patrik Schick,ST,16
 16025,Christian Kofane,ST,16
 16026,Alejo Sarco,ST,16
-
 17001,Maarten Vandevoordt,GK,17
 17002,Péter Gulácsi,GK,17
 17003,Leopold Zingerle,GK,17
-
 17004,Castello Lukeba,CB,17
 17005,El Chadaille Bitshiabu,CB,17
 17006,Willi Orbán,CB,17
 17007,Lukas Klostermann,CB,17
-
 17008,David Raum,LB,17
 17009,Max Finkgräfe,LB,17
-
 17010,Ridle Baku,RB,17
 17011,Benjamin Henrichs,RB,17
 17012,Kosta Nedeljkovic,RB,17
-
 17013,Ezechiel Banzuzi,CM,17
 17014,Nicolas Seiwald,CM,17
 17015,Amadou Haidara,CM,17
 17016,Assan Ouédraogo,CM,17
 17017,Xaver Schlager,CM,17
 17018,Kevin Kampl,CM,17
-
 17019,Joyeux Masanka Bungi,LM,17
-
 17020,Andrija Maksimovic,AM,17
 17021,Christoph Baumgartner,AM,17
 17022,Viggo Gebel,AM,17
-
 17023,Antonio Nusa,LW,17
 17024,Yan Diomande,LW,17
 17025,Timo Werner,LW,17
 17026,Tidiam Gomis,LW,17
-
 17027,Johan Bakayoko,RW,17
-
 17028,Conrad Harder,ST,17
 17029,Rômulo,ST,17
-
 18001,Lucas Chevalier,GK,18
 18002,Matvey Safonov,GK,18
 18003,Renato Marin,GK,18
-
 18004,Willian Pacho,CB,18
 18005,Ilya Zabarnyi,CB,18
 18006,Marquinhos,CB,18
 18007,Lucas Beraldo,CB,18
 18008,Noham Kamara,CB,18
-
 18009,Nuno Mendes,LB,18
 18010,Lucas Hernández,LB,18
-
 18011,Achraf Hakimi,RB,18
-
 18012,Vitinha,DM,18
-
 18013,João Neves,CM,18
 18014,Warren Zaïre-Emery,CM,18
 18015,Fabián Ruiz,CM,18
 18016,Senny Mayulu,CM,18
-
 18017,Kang-in Lee,AM,18
-
 18018,Khvicha Kvaratskhelia,LW,18
 18019,Bradley Barcola,LW,18
 18020,Quentin Ndjantou,LW,18
-
 18021,Désiré Doué,RW,18
 18022,Ibrahim Mbaye,RW,18
-
 18023,Ousmane Dembélé,CF,18
 18024,Gonçalo Ramos,CF,18
-
 19001,Philipp Köhn,GK,19
 19002,Lukas Hradecky,GK,19
 19003,Jules Stawiecki,GK,19
 19004,Yann Lienard,GK,19
-
 19005,Thilo Kehrer,CB,19
 19006,Christian Mawissa,CB,19
 19007,Mohammed Salisu,CB,19
 19008,Eric Dier,CB,19
-
 19009,Caio Henrique,LB,19
 19010,Kassoum Ouattara,LB,19
-
 19011,Vanderson,RB,19
 19012,Jordan Teze,RB,19
-
 19013,Denis Zakaria,DM,19
 19014,Aladji Bamba,DM,19
-
 19015,Lamine Camara,CM,19
 19016,Paul Pogba,CM,19
 19017,Mamadou Coulibaly,CM,19
-
 19018,Aleksandr Golovin,AM,19
 19019,Stanis Idumbo,AM,19
-
 19020,Takumi Minamino,LW,19
 19021,Ansu Fati,LW,19
 19022,Lucas Michal,LW,19
-
 19023,Maghnes Akliouche,RW,19
 19024,Krépin Diatta,RW,19
-
 19025,Mika Biereth,CF,19
 19026,Folarin Balogun,CF,19
 19027,George Ilenikhena,CF,19
 19028,Paris Brunner,CF,19
-
 20001,Gerónimo Rulli,GK,20
 20002,Jeffrey de Lange,GK,20
 20003,Rubén Blanco,GK,20
 20004,Jelle Van Neck,GK,20
-
 20005,Facundo Medina,CB,20
 20006,Leonardo Balerdi,CB,20
 20007,Nayef Aguerd,CB,20
 20008,Benjamin Pavard,CB,20
 20009,CJ Egan-Riley,CB,20
-
 20010,Emerson,LB,20
 20011,Ulisses Garcia,LB,20
-
 20012,Amir Murillo,RB,20
 20013,Pol Lirola,RB,20
-
 20014,Arthur Vermeeren,DM,20
 20015,Pierre-Emile Højbjerg,DM,20
 20016,Geoffrey Kondogbia,DM,20
-
 20017,Matt O'Riley,CM,20
 20018,Bilal Nadir,CM,20
-
 20019,Angel Gomes,AM,20
 20020,Darryl Bakola,AM,20
-
 20021,Igor Paixão,LW,20
 20022,Hamed Traoré,LW,20
-
 20023,Mason Greenwood,RW,20
 20024,Timothy Weah,RW,20
-
 20025,Amine Gouiri,CF,20
 20026,Neal Maupay,CF,20
 20027,Robinio Vaz,CF,20
