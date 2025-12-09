@@ -5,7 +5,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.TitledPane;
 import javafx.stage.Stage;
+import javafx.event.ActionEvent;
 
 import java.io.IOException;
 
@@ -15,6 +17,15 @@ public class StartController {
     @FXML
     private void handleCreateTeam(javafx.event.ActionEvent event) {
         switchScene(event, "/fxml/create-team.recources.fxml");
+    }
+    @FXML
+    private TitledPane playerSearchPane;
+    @FXML
+    private void handleAddPlayer(ActionEvent event){
+        if(!playerSearchPane.isVisible()){
+            playerSearchPane.setVisible(true);
+        }
+        playerSearchPane.setExpanded(!playerSearchPane.isExpanded());
     }
 
     @FXML
