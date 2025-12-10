@@ -13,6 +13,7 @@ public class Main extends Application {
         Scene scene = new Scene(loader.load());
         primaryStage.setScene(scene);
         primaryStage.setTitle("EK Fantasy");
+        primaryStage.setMaximized(true);
         primaryStage.show();
     }
 
