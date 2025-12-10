@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/e68b3e84-01bf-420b-9080-bf4ed1cd8cd9/FixturesAndShi.sql" value="e68b3e84-01bf-420b-9080-bf4ed1cd8cd9" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/e68b3e84-01bf-420b-9080-bf4ed1cd8cd9/Teams.sql" value="e68b3e84-01bf-420b-9080-bf4ed1cd8cd9" />
+  </component>
+</project>
