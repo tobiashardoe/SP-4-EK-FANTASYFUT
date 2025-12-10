@@ -11,6 +11,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/start-view.fxml"));
         Scene scene = new Scene(loader.load());
+        BackgroundMusic.playMusic();
         primaryStage.setScene(scene);
         primaryStage.setTitle("EK Fantasy");
         primaryStage.show();
