@@ -51,9 +51,6 @@
               <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
                   <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -80,14 +77,11 @@
               </rowConstraints>
                <children>
                   <Label prefHeight="17.0" prefWidth="91.0" text="           Team" />
-                  <Label maxHeight="300.0" maxWidth="300.0" prefHeight="25.0" prefWidth="91.0" text="           Points" GridPane.columnIndex="4" />
-                  <Label prefHeight="17.0" prefWidth="94.0" text="          Wins" GridPane.columnIndex="1" />
-                  <Label prefHeight="17.0" prefWidth="91.0" text="         Draw" GridPane.columnIndex="2" />
-                  <Label prefHeight="17.0" prefWidth="97.0" text="           Lost" GridPane.columnIndex="3" />
+                  <Label prefHeight="17.0" prefWidth="94.0" text="          Points" GridPane.columnIndex="1" />
                </children>
             </GridPane>
          </children>
       </VBox>
-      <Button layoutX="510.0" layoutY="1.0" mnemonicParsing="false" onAction="#ReturnMenu" prefHeight="25.0" prefWidth="135.0" text="Back" />
+      <Button layoutX="505.0" layoutY="1.0" mnemonicParsing="false" onAction="#ReturnMenu" prefHeight="25.0" prefWidth="140.0" text="Back" />
    </children>
 </AnchorPane>
