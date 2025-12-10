@@ -50,8 +50,8 @@ public class StartController {
 
 
     @FXML
-    private void handleSimulateGameweek(javafx.event.ActionEvent event) {
-        switchScene(event, "/fxml/simulate-gameweek.recources.fxml");
+    private void handleSimulateGameweek(ActionEvent event) {
+        switchScene(event, "/fxml/simulate-gameweek.fxml");
     }
 
 
