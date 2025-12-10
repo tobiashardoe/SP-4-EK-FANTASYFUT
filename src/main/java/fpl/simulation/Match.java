@@ -10,4 +10,12 @@ public class Match {
         this.home = home;
         this.away = away;
     }
+
+    public Club getHome() {
+        return home;
+    }
+
+    public Club getAway() {
+        return away;
+    }
 }

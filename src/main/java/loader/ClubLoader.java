@@ -17,12 +17,18 @@ public class ClubLoader {
 
             String line = bufferedreader.readLine();
 
+            if (line != null && line.startsWith("id")) {
+                line = bufferedreader.readLine();
+            }
+
             while (line != null) {
                 String[] x = line.split(",");
                 int id = Integer.parseInt(x[0]);
                 String name = x[1];
 
                 clubs.put(id, new Club(id, name));
+
+                line = bufferedreader.readLine();
             }
 
         } catch (IOException e) {

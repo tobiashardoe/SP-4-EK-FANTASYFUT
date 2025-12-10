@@ -1,7 +1,6 @@
 package loader;
 
 import fpl.model.Player;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -16,6 +15,10 @@ public class PlayerLoader {
 
             String line = bufferedreader.readLine();
 
+            if (line != null && line.startsWith("id")) {
+                line = bufferedreader.readLine();
+            }
+
             while (line != null) {
                 String[] x = line.split(",");
 
@@ -25,6 +28,8 @@ public class PlayerLoader {
                 int clubId = Integer.parseInt(x[3]);
 
                 players.put(id, new Player(id, name, position, clubId));
+
+                line = bufferedreader.readLine();
             }
 
         } catch (IOException e) {
