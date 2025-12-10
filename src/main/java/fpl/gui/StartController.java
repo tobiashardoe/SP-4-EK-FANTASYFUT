@@ -30,13 +30,13 @@ public class StartController {
 
     @FXML
     private void handleSeeLeague(javafx.event.ActionEvent event) {
-        switchScene(event, "/fxml/league-standings.recources.fxml");
+        switchScene(event, "/fxml/league-standings.fxml");
     }
 
 
     @FXML
     private void handleSimulateGameweek(javafx.event.ActionEvent event) {
-        switchScene(event, "/fxml/simulate-gameweek.recources.fxml");
+        switchScene(event, "/fxml/simulate-gameweek.fxml");
     }
 
 
