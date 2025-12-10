@@ -112,17 +112,17 @@
             <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="834.0" prefWidth="895.0">
               <children>
                 <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="View" textAlignment="CENTER" textFill="$x2" wrapText="false" />
-                        <Button layoutX="375.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleAddPlayer" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
-                        <Button layoutX="100.0" layoutY="250.0" mnemonicParsing="false" onAction="#handleAddPlayer" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
-                        <Button layoutX="375.0" layoutY="250.0" mnemonicParsing="false" onAction="#handleAddPlayer" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
-                        <Button layoutX="650.0" layoutY="250.0" mnemonicParsing="false" onAction="#handleAddPlayer" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
-                        <Button layoutX="710.0" layoutY="475.0" mnemonicParsing="false" onAction="#handleAddPlayer" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
-                        <Button layoutX="240.0" layoutY="475.0" mnemonicParsing="false" onAction="#handleAddPlayer" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
-                        <Button layoutX="480.0" layoutY="475.0" mnemonicParsing="false" onAction="#handleAddPlayer" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
-                        <Button layoutX="10.0" layoutY="475.0" mnemonicParsing="false" onAction="#handleAddPlayer" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
-                        <Button layoutX="100.0" layoutY="700.0" mnemonicParsing="false" onAction="#handleAddPlayer" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
-                        <Button layoutX="375.0" layoutY="700.0" mnemonicParsing="false" onAction="#handleAddPlayer" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
-                        <Button layoutX="650.0" layoutY="700.0" mnemonicParsing="false" onAction="#handleAddPlayer" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
+                        <Button layoutX="375.0" layoutY="25.0" mnemonicParsing="false"  onAction="#handleAddPlayer" userData="GK" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
+                        <Button layoutX="100.0" layoutY="250.0" mnemonicParsing="false" onAction="#handleAddPlayer" userData="DEF" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
+                        <Button layoutX="375.0" layoutY="250.0" mnemonicParsing="false" onAction="#handleAddPlayer" userData="DEF" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
+                        <Button layoutX="650.0" layoutY="250.0" mnemonicParsing="false" onAction="#handleAddPlayer" userData="DEF" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
+                        <Button layoutX="710.0" layoutY="475.0" mnemonicParsing="false" onAction="#handleAddPlayer" userData="MID" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
+                        <Button layoutX="240.0" layoutY="475.0" mnemonicParsing="false" onAction="#handleAddPlayer" userData="MID" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
+                        <Button layoutX="480.0" layoutY="475.0" mnemonicParsing="false" onAction="#handleAddPlayer" userData="MID" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
+                        <Button layoutX="10.0" layoutY="475.0" mnemonicParsing="false" onAction="#handleAddPlayer" userData="MID" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
+                        <Button layoutX="100.0" layoutY="700.0" mnemonicParsing="false" onAction="#handleAddPlayer" userData="FWD" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
+                        <Button layoutX="375.0" layoutY="700.0" mnemonicParsing="false" onAction="#handleAddPlayer" userData="FWD" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
+                        <Button layoutX="650.0" layoutY="700.0" mnemonicParsing="false" onAction="#handleAddPlayer" userData="FWD" prefHeight="100.0" prefWidth="175.0" text="ADD PLAYER" />
                         <TitledPane fx:id="playerSearchPane" animated="false" expanded="false" layoutX="175.0" layoutY="274.0" prefHeight="320.0" prefWidth="579.0" text="Search player" visible="false">
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
@@ -130,7 +130,7 @@
                            <graphic>
                               <VBox prefHeight="311.0" prefWidth="456.0">
                                  <children>
-                                    <TextField prefHeight="55.0" prefWidth="459.0" />
+                                    <TextField fx:id="searchField" prefHeight="55.0" prefWidth="459.0" />
                                     <TableView fx:id="playerTable" prefHeight="402.0" prefWidth="456.0">
                                       <columns>
                                         <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />

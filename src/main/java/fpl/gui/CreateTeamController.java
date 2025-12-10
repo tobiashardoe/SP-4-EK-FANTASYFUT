@@ -16,9 +16,9 @@ import util.CsvLoader;
 import java.util.List;
 
 public class CreateTeamController {
-
     private ObservableList<Player> players = FXCollections.observableArrayList();
-
+    private String activeFilter = null;
+    private List<Player> allPlayers;
 
     @FXML
     private TableView<Player> playerTable;
@@ -34,6 +34,8 @@ public class CreateTeamController {
 
     @FXML
     private void handleAddPlayer(ActionEvent event){
+        Button clickedButton = (Button) event.getSource();
+        activeFilter = (String) clickedButton.getUserData();
         if(!playerSearchPane.isVisible()){
             playerSearchPane.setVisible(true);
         }
@@ -52,21 +54,28 @@ public class CreateTeamController {
     public void initialize() {
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         positionColumn.setCellValueFactory(new PropertyValueFactory<>("position"));
+
+        searchField.textProperty().addListener((obs, oldValue, newValue) -> {
+            applyFilters();
+        });
     }
 
-    @FXML
-    private void handleAddPlayer() {
-        playerSearchPane.setExpanded(!playerSearchPane.isExpanded());
-
-        if (playerSearchPane.isExpanded()) {
-            loadPlayers();
-        }
-    }
 
     private void loadPlayers() {
-        List<Player> loaded = CsvLoader.loadPlayers("data/players.csv");
+        allPlayers = CsvLoader.loadPlayers("data/players.csv");
+        applyFilters();
+    }
+    private void applyFilters(){
+        if(allPlayers == null) return;
 
-        players.setAll(loaded);
+        String search = searchField.getText().toLowerCase().trim();
+
+        List<Player> filtered = allPlayers.stream()
+        .filter(p -> activeFilter == null || p.getPosition().equalsIgnoreCase(activeFilter))
+                .filter(p -> search.isEmpty() || p.getName().toLowerCase().contains(search))
+                .toList();
+
+        players.setAll(filtered);
         playerTable.setItems(players);
     }
 }
