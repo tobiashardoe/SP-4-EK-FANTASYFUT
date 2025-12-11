@@ -28,11 +28,6 @@ public class CreateTeamController {
     private final Map<Button, Player> selectedPlayers = new HashMap<>();
     private Map<Integer, Club> clubs = new HashMap<>();
 
-    @FXML
-    private VBox buttonField;
-
-    @FXML
-    private AnchorPane pitchPane;
 
     @FXML
     private TableView<Player> playerTable;
@@ -50,10 +45,8 @@ public class CreateTeamController {
     private Button confirmbutton;
 
     @FXML
-    private ImageView backgroundImage;
+    private Button backbutton;
 
-    @FXML
-    private VBox mainPane;
 
     @FXML
     private void handleAddPlayer(ActionEvent event){
@@ -74,11 +67,7 @@ public class CreateTeamController {
 
     @FXML
     public void initialize() {
-        buttonField.translateYProperty().bind(
-                pitchPane.heightProperty().multiply(0.15)
-        );
-        backgroundImage.fitWidthProperty().bind(mainPane.widthProperty());
-        backgroundImage.fitHeightProperty().bind(mainPane.heightProperty());
+
         playerTable.getSelectionModel().selectedItemProperty().addListener((obs, oldSel, newSel) -> {
             if (newSel != null && activeButton != null) {
                 assignPlayerToButton(newSel);
@@ -92,6 +81,7 @@ public class CreateTeamController {
             applyFilters();
         });
         confirmbutton.setOnAction(e -> saveTeam());
+        backbutton.setOnAction(event -> );
         clubs = CsvLoader.loadClubs("data/clubs.csv");
 
     }
@@ -121,7 +111,7 @@ public class CreateTeamController {
 
         CsvLoader.saveUserTeam(team, clubs);
 
-        showInfo("Team saved","Your team has been saved successfully!");
+        showInfo("Team saved","Your team has been saved successfully!\nPlease reset the game to to update your team");
     }
 
     private void loadPlayers() {
