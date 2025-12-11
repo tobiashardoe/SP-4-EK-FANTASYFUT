@@ -8,7 +8,7 @@ public class BackGroundMusic {
 
     public static void playMusic() {
         try {
-            String path = BackGroundMusic.class.getResource("/music/Ride.mp3").toExternalForm();
+            String path = BackGroundMusic.class.getResource("/playlist/Ride.mp3").toExternalForm();
             Media media = new Media(path);
             mediaPlayer = new MediaPlayer(media);
             mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE); // loop
