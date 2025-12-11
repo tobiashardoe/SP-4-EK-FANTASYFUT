@@ -86,6 +86,7 @@ public class CreateTeamController {
             applyFilters();
         });
         confirmbutton.setOnAction(e -> saveTeam());
+
         backbutton.setOnAction(event -> {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/start-view.fxml"));
@@ -127,6 +128,14 @@ public class CreateTeamController {
         CsvLoader.saveUserTeam(team, clubs);
 
         showInfo("Team saved","Your team has been saved successfully!\nPlease reset the game to to update your team");
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/start-view.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) backbutton.getScene().getWindow();
+            stage.setScene(new Scene(root));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void loadPlayers() {
