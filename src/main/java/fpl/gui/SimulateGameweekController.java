@@ -1,5 +1,11 @@
 package fpl.gui;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import loader.ClubLoader;
 import loader.PlayerLoader;
 import fpl.model.Club;
@@ -8,6 +14,8 @@ import fpl.simulation.FixtureGenerator;
 import fpl.simulation.Match;
 import fpl.simulation.MatchSimulator;
 import fpl.simulation.PointsCalculator;
+import java.io.FileWriter;
+
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,6 +25,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.IOException;
 import java.util.*;
 
 public class SimulateGameweekController {
@@ -29,6 +38,8 @@ public class SimulateGameweekController {
 
     @FXML
     private ListView<String> matchResultsList;
+
+
 
     private Map<Integer, Club> clubs;
     private Map<Integer, List<Player>> playersByClub;
@@ -110,6 +121,39 @@ public class SimulateGameweekController {
             MatchSimulator.MatchResult result =
                     MatchSimulator.simulateMatch(home, away);
 
+
+            try (FileWriter writer = new FileWriter("data/Points.csv",true)) {
+
+                if (new java.io.File("data/Points.csv").length() == 0) {
+                    writer.write("matchId,playerId,playerName,club,minutes,goals,assists,yellow,red,points\n");
+                }
+
+                String matchId = match.getHome().getName() + "_vs_" + match.getAway().getName();
+
+                for (MatchSimulator.EventResult e : result.events) {
+                    int points = PointsCalculator.calculate(e.perf);
+                    String clubName = clubs.get(e.player.getClubId()).getName();
+
+                    writer.write(
+                            matchId + "," +
+                                    e.player.getId() + "," +
+                                    e.player.getName() + "," +
+                                    clubName + "," +
+                                    e.perf.minutes + "," +
+                                    e.perf.goals + "," +
+                                    e.perf.assists + "," +
+                                    e.perf.yellow + "," +
+                                    e.perf.red + "," +
+                                    points + "\n"
+                    );
+                }
+
+            } catch (IOException io) {
+                io.printStackTrace();
+            }
+
+
+
             matchResultsList.getItems().add(
                     match.getHome().getName() + " " +
                             result.homeGoals + " - " +
@@ -117,9 +161,16 @@ public class SimulateGameweekController {
                             match.getAway().getName()
             );
 
+            Map<String, Integer> totalPointsByClub = new HashMap<>();
+
+
             for (MatchSimulator.EventResult e : result.events) {
                 int pts = PointsCalculator.calculate(e.perf);
                 String clubName = clubs.get(e.player.getClubId()).getName();
+
+                totalPointsByClub.put(clubName,
+                        totalPointsByClub.getOrDefault(clubName, 0) + pts);
+
 
                 rows.add(new ResultRow(
                         e.player.getName(),
@@ -137,6 +188,26 @@ public class SimulateGameweekController {
         resultsTable.setItems(rows);
     }
 
+    @FXML
+    public void ReturnFromWeek(ActionEvent event) {
+        switchScene(event, "/fxml/start-view.fxml");
+    }
+
+    private void switchScene(ActionEvent event, String fxmlPath) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+            Parent root = loader.load();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.centerOnScreen();
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
     public static class ResultRow {
         private final String name;
         private final String club;
@@ -146,6 +217,7 @@ public class SimulateGameweekController {
         private final int yellow;
         private final int red;
         private final int points;
+
 
         public ResultRow(String name, String club, int minutes,
                          int goals, int assists, int yellow, int red, int points) {

@@ -7,31 +7,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="fpl.gui.SimulateGameweekController"
-            prefWidth="1200" prefHeight="800">
+<AnchorPane prefHeight="800" prefWidth="1200" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpl.gui.SimulateGameweekController">
 
-    <Label text="Simulate Gameweek"
-           layoutX="450" layoutY="40">
-        <font><Font size="36"/></font>
+    <Label layoutX="450" layoutY="40" text="Simulate Gameweek">
+        <font><Font size="36" /></font>
     </Label>
 
-    <Button text="Run Simulation"
-            layoutX="500" layoutY="120"
-            prefWidth="200" prefHeight="50"
-            onAction="#handleSimulate"/>
+    <Button layoutX="500" layoutY="120" onAction="#handleSimulate" prefHeight="50" prefWidth="200" text="Run Simulation" />
 
-    <ListView fx:id="fixtureList"
-              layoutX="150" layoutY="170"
-              prefWidth="900" prefHeight="120"/>
+    <ListView fx:id="fixtureList" layoutX="150" layoutY="170" prefHeight="120" prefWidth="900" />
 
-    <ListView fx:id="matchResultsList"
-              layoutX="150" layoutY="300"
-              prefWidth="900" prefHeight="120"/>
+    <ListView fx:id="matchResultsList" layoutX="150" layoutY="300" prefHeight="120" prefWidth="900" />
 
-    <TableView fx:id="resultsTable"
-               layoutX="150" layoutY="430"
-               prefWidth="900" prefHeight="350"/>
+    <TableView fx:id="resultsTable" layoutX="150" layoutY="430" prefHeight="350" prefWidth="900" />
+   <Button layoutX="14.0" layoutY="430.0" mnemonicParsing="false" onAction="#ReturnFromWeek" prefHeight="25.0" prefWidth="123.0" text="Back" />
 
 </AnchorPane>

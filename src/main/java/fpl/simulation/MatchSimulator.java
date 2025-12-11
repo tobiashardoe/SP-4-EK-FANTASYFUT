@@ -191,6 +191,7 @@ public class MatchSimulator {
         return new PlayerPerformance(minutes, 0, 0, yellow, red);
     }
 
+
     private static EventResult findResult(List<EventResult> list,
                                           Player p) {
 
