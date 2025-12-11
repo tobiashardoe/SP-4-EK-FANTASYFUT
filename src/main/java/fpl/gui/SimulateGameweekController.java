@@ -108,7 +108,8 @@ public class SimulateGameweekController {
             List<Player> away = playersByClub.get(match.getAway().getId());
 
             MatchSimulator.MatchResult result =
-                    MatchSimulator.simulateMatch(home, away);
+                    MatchSimulator.simulateMatch(home, away, clubs);
+
 
             matchResultsList.getItems().add(
                     match.getHome().getName() + " " +

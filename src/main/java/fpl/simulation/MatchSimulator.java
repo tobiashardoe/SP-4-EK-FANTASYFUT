@@ -1,6 +1,8 @@
 package fpl.simulation;
 
 import fpl.model.Player;
+import fpl.model.Club;
+
 
 import java.util.*;
 
@@ -28,14 +30,25 @@ public class MatchSimulator {
         }
     }
 
-    public static MatchResult simulateMatch(List<Player> homePlayers,
-                                            List<Player> awayPlayers) {
+    public static MatchResult simulateMatch(
+            List<Player> homePlayers,
+            List<Player> awayPlayers,
+            Map<Integer, Club> clubs
+    ) {
 
         Random r = new Random();
         List<EventResult> events = new ArrayList<>();
 
-        int homeGoals = generateGoals(r, 1.6);
-        int awayGoals = generateGoals(r, 1.2);
+        Club homeClub = clubs.get(homePlayers.get(0).getClubId());
+        Club awayClub = clubs.get(awayPlayers.get(0).getClubId());
+
+        int homeGoals = generateGoals(r,
+                homeClub.getAttackRating(),
+                awayClub.getDefenseRating());
+
+        int awayGoals = generateGoals(r,
+                awayClub.getAttackRating(),
+                homeClub.getDefenseRating());
 
         assignGoals(homePlayers, homeGoals, events, r);
         assignGoals(awayPlayers, awayGoals, events, r);
@@ -62,19 +75,35 @@ public class MatchSimulator {
         return new MatchResult(homeGoals, awayGoals, events);
     }
 
-    private static int generateGoals(Random r, double avg) {
+    private static int generateGoals(Random r, int attack, int defense) {
 
-        double L = Math.exp(-avg);
-        double p = 1.0;
+        double form = 0.8 + r.nextDouble() * 0.8;  // 0.8–1.6
+
+        double strength = ((attack * form) - (defense * 10)) / 20.0;
+
+        strength = Math.max(0.8, Math.min(strength, 6.0));
+
         int goals = 0;
 
-        while (p > L) {
-            p *= r.nextDouble();
-            goals++;
+        while (strength > 0) {
+
+            double chance = strength / 0.9;   // scoring chance
+
+            if (chance > 1.0) chance = 1.0;
+
+            if (r.nextDouble() < chance) {
+                goals++;
+            }
+
+            strength -= 0.5;   //cycles
         }
 
-        return goals - 1;
+        return goals;
     }
+
+
+
+
 
     private static void assignGoals(List<Player> players, int goals,
                                     List<EventResult> events, Random r) {
@@ -184,7 +213,7 @@ public class MatchSimulator {
         }
 
         int red = 0;
-        if (plays && r.nextDouble() < 0.02) {
+        if (plays && r.nextDouble() < 0.0002) {
             red = 1;
         }
 

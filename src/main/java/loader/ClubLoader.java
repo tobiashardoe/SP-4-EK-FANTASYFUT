@@ -11,6 +11,7 @@ import java.util.Map;
 public class ClubLoader {
 
     public Map<Integer, Club> loadClubs(String filePath) {
+
         Map<Integer, Club> clubs = new HashMap<>();
 
         try (BufferedReader bufferedreader = new BufferedReader(new FileReader(filePath))) {
@@ -25,8 +26,10 @@ public class ClubLoader {
                 String[] x = line.split(",");
                 int id = Integer.parseInt(x[0]);
                 String name = x[1];
+                int attack = Integer.parseInt(x[2]);
+                int defense = Integer.parseInt(x[3]);
 
-                clubs.put(id, new Club(id, name));
+                clubs.put(id, new Club(id, name, attack, defense));
 
                 line = bufferedreader.readLine();
             }
