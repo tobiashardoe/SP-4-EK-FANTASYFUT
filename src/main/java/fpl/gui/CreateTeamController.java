@@ -4,16 +4,21 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import model.Club;
 import model.Player;
 import util.CsvLoader;
 
 import javafx.scene.image.ImageView;
 import java.io.File;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -81,7 +86,17 @@ public class CreateTeamController {
             applyFilters();
         });
         confirmbutton.setOnAction(e -> saveTeam());
-        backbutton.setOnAction(event -> );
+        backbutton.setOnAction(event -> {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/start-view.fxml"));
+                Parent root = loader.load();
+                Stage stage = (Stage) backbutton.getScene().getWindow();
+                stage.setScene(new Scene(root));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
         clubs = CsvLoader.loadClubs("data/clubs.csv");
 
     }
