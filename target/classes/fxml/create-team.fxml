@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="mainPane"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="fpl.gui.CreateTeamController"
+      stylesheets="@../styles/buttons.css">
+
+    <children>
+
+        <!-- HOVEDLAG -->
+        <AnchorPane fx:id="pitchPane" VBox.vgrow="ALWAYS">
+
+            <!-- BAGGRUND DER SKALERER -->
+            <ImageView fx:id="backgroundImage"
+                       preserveRatio="false"
+                       smooth="true"
+                       fitWidth="${mainPane.width}"
+                       fitHeight="${mainPane.height}"
+                       AnchorPane.topAnchor="0"
+                       AnchorPane.bottomAnchor="0"
+                       AnchorPane.leftAnchor="0"
+                       AnchorPane.rightAnchor="0">
+                <image>
+                    <Image url="@images/create-your-team.jpg"/>
+                </image>
+            </ImageView>
+
+            <!-- CENTRERET HOLD + CONFIRM -->
+            <HBox spacing="60"
+                  AnchorPane.leftAnchor="0"
+                  AnchorPane.rightAnchor="0"
+                  AnchorPane.topAnchor="150"
+                  alignment="CENTER">
+
+                <!-- HELE HOLDET -->
+                <VBox spacing="70" alignment="TOP_CENTER" fx:id="buttonField" opacity="0.9">
+
+                    <!-- FWD -->
+                    <HBox spacing="40" alignment="CENTER">
+                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="FWD" onAction="#handleAddPlayer"/>
+                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="FWD" onAction="#handleAddPlayer"/>
+                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="FWD" onAction="#handleAddPlayer"/>
+                    </HBox>
+
+                    <!-- MID -->
+                    <HBox spacing="40" alignment="CENTER">
+                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="MID" onAction="#handleAddPlayer"/>
+                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="MID" onAction="#handleAddPlayer"/>
+                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="MID" onAction="#handleAddPlayer"/>
+                    </HBox>
+
+                    <!-- DEF -->
+                    <HBox spacing="40" alignment="CENTER">
+                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="DEF" onAction="#handleAddPlayer"/>
+                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="DEF" onAction="#handleAddPlayer"/>
+                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="DEF" onAction="#handleAddPlayer"/>
+                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="DEF" onAction="#handleAddPlayer"/>
+                    </HBox>
+
+                    <!-- GK -->
+                    <HBox alignment="CENTER">
+                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="GK" onAction="#handleAddPlayer"/>
+                    </HBox>
+
+                </VBox>
+                <TitledPane fx:id="playerSearchPane"
+                            text="Search player"
+                            expanded="false"
+                            visible="false"
+                            AnchorPane.leftAnchor="120"
+                            AnchorPane.topAnchor="300"
+                            prefWidth="600">
+
+                    <content>
+                        <VBox spacing="10">
+                            <padding>
+                                <Insets top="5" right="5" bottom="5" left="5"/>
+                            </padding>
+
+                            <TextField fx:id="searchField" prefHeight="40"/>
+
+                            <TableView fx:id="playerTable" prefHeight="300">
+                                <columns>
+                                    <TableColumn fx:id="nameColumn" text="Name" prefWidth="200"/>
+                                    <TableColumn fx:id="positionColumn" text="Position" prefWidth="150"/>
+                                </columns>
+                            </TableView>
+                        </VBox>
+                    </content>
+
+                </TitledPane>
+                <!-- CONFIRM -->
+                <VBox alignment="CENTER">
+                    <Button fx:id="confirmbutton"
+                            prefWidth="300" prefHeight="100"
+                            text="CONFIRM"
+                            styleClass="confirm-button"/>
+                </VBox>
+
+            </HBox>
+
+
+
+        </AnchorPane>
+
+        <!-- BUND BAR -->
+        <HBox alignment="CENTER_LEFT" spacing="5">
+            <padding>
+                <Insets top="5" right="5" bottom="5" left="5"/>
+            </padding>
+            <children>
+                <Label text="Left status"/>
+                <Pane HBox.hgrow="ALWAYS"/>
+                <Label text="Right status"/>
+            </children>
+        </HBox>
+
+    </children>
+
+</VBox>

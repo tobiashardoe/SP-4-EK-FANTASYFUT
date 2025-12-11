@@ -1,0 +1,27 @@
+.button {
+    -fx-background-color: linear-gradient(#1d1d1d, #141414);
+    -fx-text-fill: #e6e6e6;
+    -fx-background-radius: 6;
+    -fx-font-size: 14px;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#2a2a2a, #1a1a1a);
+}
+
+.button:pressed {
+    -fx-background-color: linear-gradient(#121212, #0d0d0d);
+}
+.confirm-button {
+    -fx-background-color: #6c6b6b;    /* lys grå */
+    -fx-text-fill: #ffffff;              /* mørk tekst */
+    -fx-background-radius: 10;
+}
+
+.confirm-button:hover {
+    -fx-background-color: #424141;    /* lidt lysere når hover */
+}
+
+.confirm-button:pressed {
+    -fx-background-color: #424141;    /* mørkere når trykket */
+}
