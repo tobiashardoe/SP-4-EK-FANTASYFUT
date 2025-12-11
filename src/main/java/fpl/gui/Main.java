@@ -9,6 +9,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        BackGroundMusic.playMusic();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/start-view.fxml"));
         Scene scene = new Scene(loader.load());
         primaryStage.setScene(scene);
