@@ -9,8 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import model.Club;
 import model.Player;
@@ -85,6 +84,24 @@ public class CreateTeamController {
         searchField.textProperty().addListener((obs, oldValue, newValue) -> {
             applyFilters();
         });
+        Label closeBtn = new Label("X");
+        closeBtn.setStyle("-fx-font-size: 18px; -fx-cursor: hand;");
+        closeBtn.getStyleClass().add("close-btn");
+        closeBtn.setDisable(false);
+        closeBtn.setOnMouseClicked(e -> {
+            playerSearchPane.setExpanded(false);
+            playerSearchPane.setVisible(false);
+        });
+
+
+        HBox titleBar = new HBox();
+        Region spacer = new Region();
+        HBox.setHgrow(spacer, Priority.ALWAYS);
+
+        titleBar.getChildren().addAll(spacer, closeBtn);
+
+        // Brug vores custom titleBar som graphic
+        playerSearchPane.setGraphic(titleBar);
         confirmbutton.setOnAction(e -> saveTeam());
 
         backbutton.setOnAction(event -> {

@@ -41,7 +41,7 @@
 
                            <Button fx:id="confirmbutton" layoutX="1000.0" layoutY="600.0" prefHeight="50.0" prefWidth="200.0" styleClass="confirm-button" text="CONFIRM" />
 
-                <TitledPane fx:id="playerSearchPane" expanded="false" layoutX="1200.0" maxWidth="Infinity" minWidth="250.0" prefWidth="300.0" text="Search player" visible="false">
+                <TitledPane fx:id="playerSearchPane" expanded="false" layoutX="1000.0" maxWidth="Infinity" minWidth="250.0" prefWidth="300.0" text="Search player" visible="false">
 
                     <content>
                   <VBox spacing="10">

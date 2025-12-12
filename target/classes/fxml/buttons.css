@@ -42,7 +42,7 @@
     -fx-background-radius: 0 0 6 6;
 }
 
-/* ----- TextField ----- */
+
 .text-field {
     -fx-background-color: linear-gradient(#1d1d1d, #6c1d1d);
     -fx-text-fill: #e6e6e6;
@@ -55,7 +55,7 @@
     -fx-background-color: linear-gradient(#2a2a2a, #7c2a2a);
 }
 
-/* ----- TableView ----- */
+
 .table-view {
     -fx-base: #1d1d1d;
     -fx-control-inner-background: #1d1d1d;
@@ -78,4 +78,26 @@
 
 .table-row-cell:filled:selected {
     -fx-background-color: linear-gradient(#2a2a2a, #7c2a2a);
+}
+.titled-pane > .title {
+    -fx-background-color: linear-gradient(#1d1d1d, #6c1d1d);
+    -fx-padding: 6;
+    -fx-background-radius: 6 6 0 0;
+}
+
+.titled-pane > .title .label {
+    -fx-text-fill: white;
+}
+.titled-pane > .title > .arrow-button {
+    -fx-padding: 0;
+    -fx-opacity: 0;
+}
+.close-btn {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-cursor: hand;
+}
+
+.close-btn:hover {
+    -fx-text-fill: #6c1d1d;
 }
