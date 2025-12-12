@@ -14,11 +14,7 @@ import javafx.stage.Stage;
 import model.Club;
 import model.Player;
 import util.CsvLoader;
-
-import javafx.scene.image.ImageView;
-import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -71,13 +67,11 @@ public class CreateTeamController {
 
     @FXML
     public void initialize() {
-
         playerTable.getSelectionModel().selectedItemProperty().addListener((obs, oldSel, newSel) -> {
             if (newSel != null && activeButton != null) {
                 assignPlayerToButton(newSel);
             }
         });
-
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         positionColumn.setCellValueFactory(new PropertyValueFactory<>("position"));
 
@@ -92,18 +86,14 @@ public class CreateTeamController {
             playerSearchPane.setExpanded(false);
             playerSearchPane.setVisible(false);
         });
-
-
         HBox titleBar = new HBox();
         Region spacer = new Region();
         HBox.setHgrow(spacer, Priority.ALWAYS);
-
         titleBar.getChildren().addAll(spacer, closeBtn);
 
         // Brug vores custom titleBar som graphic
         playerSearchPane.setGraphic(titleBar);
         confirmbutton.setOnAction(e -> saveTeam());
-
         backbutton.setOnAction(event -> {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/start-view.fxml"));

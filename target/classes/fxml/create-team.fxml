@@ -16,7 +16,7 @@
    <children>
       <ImageView id="createTeamImage" fitWidth="${createTeam.width}" fitHeight="${createTeam.height}" preserveRatio="false"  >
          <image>
-            <Image url="@images/createteam.jpg" />
+            <Image url="@images/Team.jpg" />
          </image>
       </ImageView>
       <Button layoutX="16.0" layoutY="27.0" minWidth="50.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" text="BACK" fx:id="backbutton">
