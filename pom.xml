@@ -14,10 +14,18 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <!-- JavaFX version (samme for alle moduler) -->
         <javafx.version>21.0.2</javafx.version>
-        <javafx.platform>win</javafx.platform>
     </properties>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>kr.motd.maven</groupId>
+                <artifactId>os-maven-plugin</artifactId>
+                <version>1.7.0</version>
+            </extension>
+        </extensions>
+    </build>
 
     <dependencies>
 
@@ -25,29 +33,30 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>${javafx.version}</version>
-            <classifier>${javafx.platform}</classifier>
+            <classifier>${os.detected.classifier}</classifier>
         </dependency>
 
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>${javafx.version}</version>
-            <classifier>${javafx.platform}</classifier>
+            <classifier>${os.detected.classifier}</classifier>
         </dependency>
 
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
             <version>${javafx.version}</version>
-            <classifier>${javafx.platform}</classifier>
+            <classifier>${os.detected.classifier}</classifier>
         </dependency>
 
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-media</artifactId>
             <version>${javafx.version}</version>
-            <classifier>${javafx.platform}</classifier>
+            <classifier>${os.detected.classifier}</classifier>
         </dependency>
 
     </dependencies>
+
 </project>
