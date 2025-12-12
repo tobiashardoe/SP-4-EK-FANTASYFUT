@@ -26,3 +26,56 @@
     -fx-background-color: linear-gradient(#2a2a2a, #145314);
 
 }
+
+.titled-pane {
+    -fx-text-fill: #e6e6e6;
+}
+
+.titled-pane > .title {
+    -fx-background-color: linear-gradient(#1d1d1d, #6c1d1d);
+    -fx-text-fill: #e6e6e6;
+    -fx-background-radius: 6 6 0 0;
+}
+
+.titled-pane > .content {
+    -fx-background-color: #1d1d1d;
+    -fx-background-radius: 0 0 6 6;
+}
+
+/* ----- TextField ----- */
+.text-field {
+    -fx-background-color: linear-gradient(#1d1d1d, #6c1d1d);
+    -fx-text-fill: #e6e6e6;
+    -fx-background-radius: 6;
+    -fx-prompt-text-fill: #bbbbbb;
+    -fx-border-color: transparent;
+}
+
+.text-field:focused {
+    -fx-background-color: linear-gradient(#2a2a2a, #7c2a2a);
+}
+
+/* ----- TableView ----- */
+.table-view {
+    -fx-base: #1d1d1d;
+    -fx-control-inner-background: #1d1d1d;
+    -fx-background-color: #1d1d1d;
+    -fx-table-cell-border-color: #6c1d1d;
+    -fx-text-background-color: #e6e6e6;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(#1d1d1d, #6c1d1d);
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #e6e6e6;
+}
+
+.table-row-cell {
+    -fx-text-fill: #e6e6e6;
+}
+
+.table-row-cell:filled:selected {
+    -fx-background-color: linear-gradient(#2a2a2a, #7c2a2a);
+}
