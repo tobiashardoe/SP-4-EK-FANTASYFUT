@@ -50,6 +50,12 @@ public class SimulateGameweekController {
         loadData();
         showFixtures();
     }
+    @FXML
+    private void ReturnMenu(ActionEvent event){
+        switchScene(event, "/fxml/start-view.fxml");
+
+
+    }
 
     private void setupTable() {
 
