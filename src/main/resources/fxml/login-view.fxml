@@ -1,29 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="fpl.gui.LoginController"
-            prefWidth="400" prefHeight="300">
-
-    <TextField fx:id="usernameField"
-               layoutX="120" layoutY="80"
-               prefWidth="180"/>
-
-    <PasswordField fx:id="passwordField"
-                   layoutX="120" layoutY="130"
-                   prefWidth="180"/>
-
-    <Button text="Login"
-            layoutX="120" layoutY="180"
-            prefWidth="80"
-            onAction="#handleLogin"/>
-
-    <Button text="Create"
-            layoutX="220" layoutY="180"
-            prefWidth="80"
-            onAction="#handleCreateAccount"/>
-
-</AnchorPane>
+<Pane prefHeight="1080.0" prefWidth="1980.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpl.gui.LoginController">
+   <children>
+      <ImageView fitHeight="1084.0" fitWidth="1987.0">
+         <image>
+            <Image url="@../images/ea-sports-fc-25-3840x2160-17827.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="7.0" prefHeight="1080.0" prefWidth="1980.0">
+      
+             <TextField fx:id="usernameField" layoutX="900.0" layoutY="360.0" prefHeight="32.0" prefWidth="180.0" />
+      
+             <PasswordField fx:id="passwordField" layoutX="900.0" layoutY="398.0" prefHeight="31.0" prefWidth="180" />
+      
+             <Button layoutX="900.0" layoutY="440.0" onAction="#handleLogin" prefWidth="80" text="Login" />
+      
+             <Button layoutX="1000.0" layoutY="440.0" onAction="#handleCreateAccount" prefWidth="80" text="Create" />
+         <TextField layoutX="672.0" layoutY="147.0" prefHeight="167.0" prefWidth="664.0" text="EK FANTASY 25">
+            <font>
+               <Font name="Arial Black" size="62.0" />
+            </font>
+         </TextField>
+      
+      </AnchorPane>
+   </children>
+</Pane>

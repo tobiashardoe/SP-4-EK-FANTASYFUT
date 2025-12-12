@@ -12,14 +12,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="createTeam" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  stylesheets="@buttons.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpl.gui.CreateTeamController">
+<Pane fx:id="createTeam" prefHeight="1080.0" prefWidth="1980.0" stylesheets="@buttons.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpl.gui.CreateTeamController">
     <children>
-        <ImageView fx:id="createTeamImage"  fitWidth="${createTeam.width}"  fitHeight="${createTeam.height}" preserveRatio="false">
+        <ImageView fx:id="createTeamImage" fitHeight="2176.0" fitWidth="3866.0" layoutX="2.0" layoutY="4.0" preserveRatio="false">
             <image>
-                <Image url="@../images/createteam.jpg"/>
+                <Image url="@../images/createteam.jpg" />
             </image>
         </ImageView>
-        <Button layoutX="16.0" layoutY="27.0" minWidth="50.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" text="BACK" fx:id="backbutton">
+        <Button fx:id="backbutton" layoutX="16.0" layoutY="27.0" minWidth="50.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" text="BACK">
             <font>
                 <Font size="10.0" />
             </font>
@@ -41,7 +41,7 @@
 
         <Button fx:id="confirmbutton" layoutX="1000.0" layoutY="600.0" prefHeight="50.0" prefWidth="200.0" styleClass="confirm-button" text="CONFIRM" />
 
-        <TitledPane fx:id="playerSearchPane" expanded="false" layoutX="1000.0" maxWidth="Infinity" minWidth="250.0" prefWidth="300.0" text="Search player" visible="false">
+        <TitledPane fx:id="playerSearchPane" expanded="false" layoutX="1744.0" prefHeight="1080.0" prefWidth="1236.0" text="Search player" visible="false">
 
             <content>
                 <VBox spacing="10">

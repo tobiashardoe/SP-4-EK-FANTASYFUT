@@ -1,38 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="fpl.gui.SimulateGameweekController"
-            prefWidth="1200" prefHeight="800"
-            stylesheets="@../styles/SimLayout.css">
-
-    <Label text="Simulate Gameweek"
-           layoutX="450" layoutY="40"
-           styleClass="title"/>
-
-    <Button text="Run Simulation"
-            layoutX="500" layoutY="120"
-            prefWidth="200" prefHeight="50"
-            styleClass="primary-button"
-            onAction="#handleSimulate" />
-
-    <ListView fx:id="fixtureList"
-              layoutX="150" layoutY="170"
-              prefWidth="900" prefHeight="120"
-              styleClass="card"/>
-
-    <ListView fx:id="matchResultsList"
-              layoutX="150" layoutY="300"
-              prefWidth="900" prefHeight="120"
-              styleClass="card"/>
-
-    <TableView fx:id="resultsTable"
-               layoutX="150" layoutY="430"
-               prefWidth="900" prefHeight="350"
-               styleClass="card"/>
-
-</AnchorPane>
+<Pane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpl.gui.SimulateGameweekController">
+   <children>
+      <ImageView fitHeight="1082.0" fitWidth="1923.0">
+         <image>
+            <Image url="@.././images/img.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="backbutton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../styles/SimLayout.css">
+      
+          <Label layoutX="450" layoutY="40" styleClass="title" text="Simulate Gameweek" />
+      
+          <Button layoutX="800.0" layoutY="120" onAction="#handleSimulate" prefHeight="100.0" prefWidth="300.0" styleClass="primary-button" text="Run Simulation" />
+      
+          <ListView fx:id="fixtureList" layoutX="500.0" layoutY="300.0" prefHeight="185.0" prefWidth="900" styleClass="card" />
+      
+          <ListView fx:id="matchResultsList" layoutX="500.0" layoutY="500.0" prefHeight="120" prefWidth="900" styleClass="card" />
+      
+          <TableView fx:id="resultsTable" layoutX="500.0" layoutY="600.0" prefHeight="350" prefWidth="900" styleClass="card" />
+      
+      </AnchorPane>
+   </children>
+</Pane>
