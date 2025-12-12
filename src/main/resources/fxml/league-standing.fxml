@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="fpl.gui.LeagueStandingsController"
+            prefWidth="600" prefHeight="700">
+
+    <Label text="League Standings"
+           layoutX="150" layoutY="30">
+        <font><Font size="40"/></font>
+    </Label>
+
+    <TableView fx:id="table"
+               layoutX="50" layoutY="120"
+               prefWidth="500" prefHeight="500">
+
+        <columns>
+            <TableColumn fx:id="rankCol" text="Rank" prefWidth="80"/>
+            <TableColumn fx:id="userCol" text="User" prefWidth="250"/>
+            <TableColumn fx:id="pointsCol" text="Points" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+    <Button text="Back"
+            layoutX="250" layoutY="640"
+            prefWidth="120" prefHeight="40"
+            onAction="#handleBack"/>
+
+</AnchorPane>
