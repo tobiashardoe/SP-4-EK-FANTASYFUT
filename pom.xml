@@ -14,13 +14,11 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <!-- JavaFX version -->
         <javafx.version>21.0.2</javafx.version>
     </properties>
 
     <dependencies>
 
-        <!-- JavaFX – platform afhænger af os.detected.classifier -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
@@ -42,12 +40,18 @@
             <classifier>${os.detected.classifier}</classifier>
         </dependency>
 
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.45.2.0</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
         <plugins>
 
-            <!-- Automatisk OS detektion -->
             <plugin>
                 <groupId>kr.motd.maven</groupId>
                 <artifactId>os-maven-plugin</artifactId>
@@ -55,7 +59,6 @@
                 <extensions>true</extensions>
             </plugin>
 
-            <!-- JavaFX Maven plugin -->
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>

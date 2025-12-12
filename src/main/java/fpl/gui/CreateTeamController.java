@@ -1,26 +1,25 @@
 package fpl.gui;
 
+import db.ClubDObject;
+import db.PlayerDObject;
+import db.UserTeamDObject;
+import fpl.model.Club;
+import fpl.model.Player;
+import fpl.session.UserSession;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
-import model.Club;
-import model.Player;
-import util.CsvLoader;
 
-import javafx.scene.image.ImageView;
-import java.io.File;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class CreateTeamController {
+
     private ObservableList<Player> players = FXCollections.observableArrayList();
     private String activeFilter = null;
     private List<Player> allPlayers;
@@ -28,104 +27,53 @@ public class CreateTeamController {
     private final Map<Button, Player> selectedPlayers = new HashMap<>();
     private Map<Integer, Club> clubs = new HashMap<>();
 
-    @FXML
-    private VBox buttonField;
-
-    @FXML
-    private AnchorPane pitchPane;
-
-    @FXML
-    private TableView<Player> playerTable;
-
-    @FXML
-    private TableColumn<Player, String> nameColumn;
-
-    @FXML
-    private TableColumn<Player, String> positionColumn;
-
-    @FXML
-    private TitledPane playerSearchPane;
-
-    @FXML
-    private Button confirmbutton;
-
-    @FXML
-    private ImageView backgroundImage;
-
-    @FXML
-    private VBox mainPane;
-
-    @FXML
-    private void handleAddPlayer(ActionEvent event){
-        Button clickedButton = (Button) event.getSource();
-        activeButton = (Button) event.getSource();
-        activeFilter = (String) clickedButton.getUserData();
-        if(!playerSearchPane.isVisible()){
-            playerSearchPane.setVisible(true);
-        }
-        playerSearchPane.setExpanded(!playerSearchPane.isExpanded());
-
-        loadPlayers();
-    }
-
-
-    @FXML
-    private TextField searchField;
+    @FXML private VBox buttonField;
+    @FXML private AnchorPane pitchPane;
+    @FXML private TableView<Player> playerTable;
+    @FXML private TableColumn<Player, String> nameColumn;
+    @FXML private TableColumn<Player, String> positionColumn;
+    @FXML private TitledPane playerSearchPane;
+    @FXML private Button confirmbutton;
+    @FXML private ImageView backgroundImage;
+    @FXML private VBox mainPane;
+    @FXML private TextField searchField;
 
     @FXML
     public void initialize() {
-        buttonField.translateYProperty().bind(
-                pitchPane.heightProperty().multiply(0.15)
-        );
+        buttonField.translateYProperty().bind(pitchPane.heightProperty().multiply(0.15));
         backgroundImage.fitWidthProperty().bind(mainPane.widthProperty());
         backgroundImage.fitHeightProperty().bind(mainPane.heightProperty());
+
         playerTable.getSelectionModel().selectedItemProperty().addListener((obs, oldSel, newSel) -> {
-            if (newSel != null && activeButton != null) {
-                assignPlayerToButton(newSel);
-            }
+            if (newSel != null && activeButton != null) assignPlayerToButton(newSel);
         });
 
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         positionColumn.setCellValueFactory(new PropertyValueFactory<>("position"));
 
-        searchField.textProperty().addListener((obs, oldValue, newValue) -> {
-            applyFilters();
-        });
+        searchField.textProperty().addListener((obs, oldValue, newValue) -> applyFilters());
+
         confirmbutton.setOnAction(e -> saveTeam());
-        clubs = CsvLoader.loadClubs("data/clubs.csv");
 
+        ClubDObject clubObject = new ClubDObject();
+        clubs = clubObject.getAllClubs();
     }
 
-    private void assignPlayerToButton(Player player){
-        boolean alreadyChosen = selectedPlayers.values().stream().anyMatch(p ->p.getId() == player.getId());
-        if (alreadyChosen) {
-            showError("Player already selected!", player.getName() + " is already in your team");
-            return;
-        }
-        Club club = clubs.get(player.getClubId());
-                String clubName = (club != null) ? club.getName() : "Unknown Club";
+    @FXML
+    private void handleAddPlayer(ActionEvent event) {
+        Button clicked = (Button) event.getSource();
+        activeButton = clicked;
+        activeFilter = (String) clicked.getUserData();
 
-        activeButton.setText(player.getName() + "\n" + clubName);
-        selectedPlayers.put(activeButton, player);
-        playerSearchPane.setExpanded(false);
-        playerSearchPane.setVisible(false);
-    }
+        if (!playerSearchPane.isVisible()) playerSearchPane.setVisible(true);
+        playerSearchPane.setExpanded(true);
 
-    private void saveTeam(){
-        List<Player> team = new ArrayList<>(selectedPlayers.values());
-
-        if(team.size() != 11){
-            showError("Invalid team","You must select 11 players before saving your team. ");
-            return;
-        }
-
-        CsvLoader.saveUserTeam(team, clubs);
-
-        showInfo("Team saved","Your team has been saved successfully!");
+        loadPlayers();
     }
 
     private void loadPlayers() {
-        allPlayers = CsvLoader.loadPlayers("data/players.csv");
+        PlayerDObject dao = new PlayerDObject();
+        allPlayers = dao.getAllPlayers();
         applyFilters();
     }
 
@@ -143,18 +91,64 @@ public class CreateTeamController {
         players.setAll(filtered);
         playerTable.setItems(players);
     }
-    private void showError(String title, String message) {
-        javafx.scene.control.Alert alert = new javafx.scene.control.Alert(javafx.scene.control.Alert.AlertType.ERROR);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
+
+    private void assignPlayerToButton(Player player) {
+        boolean exists = selectedPlayers.values().stream().anyMatch(p -> p.getId() == player.getId());
+        if (exists) {
+            showError("Player already selected", player.getName() + " is already in your team.");
+            return;
+        }
+
+        Club club = clubs.get(player.getClubId());
+        String clubName = club != null ? club.getName() : "Unknown";
+
+        activeButton.setText(player.getName() + "\n" + clubName);
+
+        selectedPlayers.put(activeButton, player);
+
+        playerSearchPane.setExpanded(false);
+        playerSearchPane.setVisible(false);
     }
-    private void showInfo(String title, String msg) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(msg);
-        alert.showAndWait();
+
+    private void saveTeam(){
+
+        Integer userId = UserSession.getInstance().getUserId();
+
+        if (userId == null) {
+            Alert a = new Alert(Alert.AlertType.ERROR, "You must log in first.");
+            a.showAndWait();
+            return;
+        }
+
+        List<Player> team = new ArrayList<>(selectedPlayers.values());
+
+        if (team.size() != 11) {
+            Alert a = new Alert(Alert.AlertType.ERROR, "You must select 11 players.");
+            a.showAndWait();
+            return;
+        }
+
+        UserTeamDObject dao = new UserTeamDObject();
+        dao.saveTeam(userId, team);
+
+        Alert a = new Alert(Alert.AlertType.INFORMATION, "Team saved.");
+        a.showAndWait();
+    }
+
+
+    private void showError(String t, String m) {
+        Alert a = new Alert(Alert.AlertType.ERROR);
+        a.setTitle(t);
+        a.setHeaderText(null);
+        a.setContentText(m);
+        a.showAndWait();
+    }
+
+    private void showInfo(String t, String m) {
+        Alert a = new Alert(Alert.AlertType.INFORMATION);
+        a.setTitle(t);
+        a.setHeaderText(null);
+        a.setContentText(m);
+        a.showAndWait();
     }
 }

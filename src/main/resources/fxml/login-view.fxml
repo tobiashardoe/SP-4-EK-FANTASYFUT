@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="fpl.gui.LoginController"
+            prefWidth="400" prefHeight="300">
+
+    <TextField fx:id="usernameField"
+               layoutX="120" layoutY="80"
+               prefWidth="180"/>
+
+    <PasswordField fx:id="passwordField"
+                   layoutX="120" layoutY="130"
+                   prefWidth="180"/>
+
+    <Button text="Login"
+            layoutX="120" layoutY="180"
+            prefWidth="80"
+            onAction="#handleLogin"/>
+
+    <Button text="Create"
+            layoutX="220" layoutY="180"
+            prefWidth="80"
+            onAction="#handleCreateAccount"/>
+
+</AnchorPane>

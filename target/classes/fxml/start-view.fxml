@@ -41,7 +41,7 @@
                   style="-fx-padding: 20 0 0 100;">
 
 
-            <Text text="UEFA FOOTBALL FANTASY" fill="white">
+            <Text text="EK FOOTBALL FANTASY" fill="white">
                     <font>
                         <Font size="50"/>
                     </font>

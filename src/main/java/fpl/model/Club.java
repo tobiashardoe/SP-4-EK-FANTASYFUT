@@ -6,7 +6,6 @@ public class Club {
     private int attackRating;
     private int defenseRating;
 
-
     public Club(int id, String name, int attackRating, int defenseRating) {
         this.id = id;
         this.name = name;
@@ -16,12 +15,6 @@ public class Club {
 
     public int getId() { return id; }
     public String getName() { return name; }
-
-    public int getAttackRating() {
-        return attackRating;
-    }
-
-    public int getDefenseRating() {
-        return defenseRating;
-    }
+    public int getAttackRating() { return attackRating; }
+    public int getDefenseRating() { return defenseRating; }
 }
