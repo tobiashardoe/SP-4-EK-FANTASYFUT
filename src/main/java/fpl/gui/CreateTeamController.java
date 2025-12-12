@@ -4,16 +4,21 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import model.Club;
 import model.Player;
 import util.CsvLoader;
 
 import javafx.scene.image.ImageView;
 import java.io.File;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,11 +33,6 @@ public class CreateTeamController {
     private final Map<Button, Player> selectedPlayers = new HashMap<>();
     private Map<Integer, Club> clubs = new HashMap<>();
 
-    @FXML
-    private VBox buttonField;
-
-    @FXML
-    private AnchorPane pitchPane;
 
     @FXML
     private TableView<Player> playerTable;
@@ -50,10 +50,8 @@ public class CreateTeamController {
     private Button confirmbutton;
 
     @FXML
-    private ImageView backgroundImage;
+    private Button backbutton;
 
-    @FXML
-    private VBox mainPane;
 
     @FXML
     private void handleAddPlayer(ActionEvent event){
@@ -74,11 +72,7 @@ public class CreateTeamController {
 
     @FXML
     public void initialize() {
-        buttonField.translateYProperty().bind(
-                pitchPane.heightProperty().multiply(0.15)
-        );
-        backgroundImage.fitWidthProperty().bind(mainPane.widthProperty());
-        backgroundImage.fitHeightProperty().bind(mainPane.heightProperty());
+
         playerTable.getSelectionModel().selectedItemProperty().addListener((obs, oldSel, newSel) -> {
             if (newSel != null && activeButton != null) {
                 assignPlayerToButton(newSel);
@@ -92,6 +86,18 @@ public class CreateTeamController {
             applyFilters();
         });
         confirmbutton.setOnAction(e -> saveTeam());
+
+        backbutton.setOnAction(event -> {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/start-view.fxml"));
+                Parent root = loader.load();
+                Stage stage = (Stage) backbutton.getScene().getWindow();
+                stage.setScene(new Scene(root));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
         clubs = CsvLoader.loadClubs("data/clubs.csv");
 
     }
@@ -121,7 +127,15 @@ public class CreateTeamController {
 
         CsvLoader.saveUserTeam(team, clubs);
 
-        showInfo("Team saved","Your team has been saved successfully!");
+        showInfo("Team saved","Your team has been saved successfully!\nPlease reset the game to to update your team");
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/start-view.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) backbutton.getScene().getWindow();
+            stage.setScene(new Scene(root));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void loadPlayers() {
