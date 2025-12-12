@@ -19,16 +19,24 @@ public class StartController {
         switchScene(event, "/fxml/create-team.fxml");
 
     }
-
+    @FXML
+    private TitledPane playerSearchPane;
+    @FXML
+    private void handleAddPlayer(ActionEvent event){
+        if(!playerSearchPane.isVisible()){
+            playerSearchPane.setVisible(true);
+        }
+        playerSearchPane.setExpanded(!playerSearchPane.isExpanded());
+    }
 
     @FXML
     private void handleSeeLeague(javafx.event.ActionEvent event) {
-        switchScene(event, "/fxml/league-standings.fxml");
+        switchScene(event, "/fxml/league-standings.recources.fxml");
     }
 
 
     @FXML
-    private void handleSimulateGameweek(javafx.event.ActionEvent event) {
+    private void handleSimulateGameweek(ActionEvent event) {
         switchScene(event, "/fxml/simulate-gameweek.fxml");
     }
 
@@ -52,5 +60,4 @@ public class StartController {
             e.printStackTrace();
         }
     }
-
 }

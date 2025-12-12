@@ -1,21 +1,21 @@
-id,name
-1,Arsenal FC
-2,Manchester City FC
-3,Liverpool FC
-4,Chelsea FC
-5,Tottenham Hotspur
-6,FC Barcelona
-7,Real Madrid
-8,Atletico Madrid
-9,Villarreal CF
-10,Inter Milan
-11,AC Milan
-12,Napoli
-13,Juventus
-14,Bayern Munich
-15,Borussia Dortmund
-16,Leverkusen
-17,RB Leipzig
-18,Paris Saint-Germain
-19,AS Monaco
-20,Olympique Marseille
+id,name,attackRating,defenseRating
+1,Arsenal FC,97,94
+2,Manchester City FC,96,88
+3,Liverpool FC,90,84
+4,Chelsea FC,86,84
+5,Tottenham Hotspur,85,79
+6,FC Barcelona,90,81
+7,Real Madrid,92,86
+8,Atletico Madrid,84,85
+9,Villarreal CF,80,75
+10,Inter Milan,85,82
+11,AC Milan,82,79
+12,Napoli,84,80
+13,Juventus,82,82
+14,Bayern Munich,96,85
+15,Borussia Dortmund,87,80
+16,Leverkusen,86,83
+17,RB Leipzig,85,82
+18,Paris Saint-Germain,94,85
+19,AS Monaco,82,76
+20,Olympique Marseille,81,75
