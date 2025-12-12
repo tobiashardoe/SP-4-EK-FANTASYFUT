@@ -10,12 +10,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.*;
 
 public class CreateTeamController {
@@ -27,23 +31,16 @@ public class CreateTeamController {
     private final Map<Button, Player> selectedPlayers = new HashMap<>();
     private Map<Integer, Club> clubs = new HashMap<>();
 
-    @FXML private VBox buttonField;
-    @FXML private AnchorPane pitchPane;
     @FXML private TableView<Player> playerTable;
     @FXML private TableColumn<Player, String> nameColumn;
     @FXML private TableColumn<Player, String> positionColumn;
     @FXML private TitledPane playerSearchPane;
     @FXML private Button confirmbutton;
-    @FXML private ImageView backgroundImage;
-    @FXML private VBox mainPane;
+    @FXML private Button backbutton;
     @FXML private TextField searchField;
 
     @FXML
     public void initialize() {
-        buttonField.translateYProperty().bind(pitchPane.heightProperty().multiply(0.15));
-        backgroundImage.fitWidthProperty().bind(mainPane.widthProperty());
-        backgroundImage.fitHeightProperty().bind(mainPane.heightProperty());
-
         playerTable.getSelectionModel().selectedItemProperty().addListener((obs, oldSel, newSel) -> {
             if (newSel != null && activeButton != null) assignPlayerToButton(newSel);
         });
@@ -52,11 +49,36 @@ public class CreateTeamController {
         positionColumn.setCellValueFactory(new PropertyValueFactory<>("position"));
 
         searchField.textProperty().addListener((obs, oldValue, newValue) -> applyFilters());
-
+        Label closeBtn = new Label("X");
+        closeBtn.setStyle("-fx-font-size: 18px; -fx-cursor: hand;");
+        closeBtn.getStyleClass().add("close-btn");
+        closeBtn.setDisable(false);
+        closeBtn.setOnMouseClicked(e -> {
+            playerSearchPane.setExpanded(false);
+            playerSearchPane.setVisible(false);
+        });
+        HBox titleBar = new HBox();
+        Region spacer = new Region();
+        HBox.setHgrow(spacer, Priority.ALWAYS);
+        titleBar.getChildren().addAll(spacer, closeBtn);
+        playerSearchPane.setGraphic(titleBar);
         confirmbutton.setOnAction(e -> saveTeam());
+        backbutton.setOnAction(event -> {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/start-view.fxml"));
+                Parent root = loader.load();
+                Stage stage = (Stage) backbutton.getScene().getWindow();
+                stage.setScene(new Scene(root));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
 
         ClubDObject clubObject = new ClubDObject();
         clubs = clubObject.getAllClubs();
+
+
+
     }
 
     @FXML

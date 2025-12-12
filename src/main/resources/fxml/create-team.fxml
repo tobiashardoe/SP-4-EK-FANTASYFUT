@@ -1,127 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox fx:id="mainPane"
-      xmlns="http://javafx.com/javafx/21"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="fpl.gui.CreateTeamController"
-      stylesheets="@../styles/buttons.css">
-
+<Pane fx:id="createTeam" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  stylesheets="@buttons.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpl.gui.CreateTeamController">
     <children>
+        <ImageView fx:id="createTeamImage"  fitWidth="${createTeam.width}"  fitHeight="${createTeam.height}" preserveRatio="false">
+            <image>
+                <Image url="@../images/createteam.jpg"/>
+            </image>
+        </ImageView>
+        <Button layoutX="16.0" layoutY="27.0" minWidth="50.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" text="BACK" fx:id="backbutton">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Button>
+        <Button layoutX="575.0" layoutY="75.0" maxWidth="Infinity" minWidth="100.0" onAction="#handleAddPlayer" prefHeight="75.0" prefWidth="150.0" text="ADD PLAYER" userData="FWD" />
+        <Button layoutX="850.0" layoutY="125.0" maxWidth="Infinity" minWidth="100.0" onAction="#handleAddPlayer" prefHeight="75.0" prefWidth="150.0" text="ADD PLAYER" userData="FWD" />
+        <Button layoutX="300.0" layoutY="125.0" maxWidth="Infinity" minWidth="100.0" onAction="#handleAddPlayer" prefHeight="75.0" prefWidth="150.0" text="ADD PLAYER" userData="FWD" />
 
-        <!-- HOVEDLAG -->
-        <AnchorPane fx:id="pitchPane" VBox.vgrow="ALWAYS">
+        <Button layoutX="575.0" layoutY="250.0" maxWidth="Infinity" minWidth="100.0" onAction="#handleAddPlayer" prefHeight="75.0" prefWidth="150.0" text="ADD PLAYER" userData="MID" />
+        <Button layoutX="800.0" layoutY="300.0" maxWidth="Infinity" minWidth="100.0" onAction="#handleAddPlayer" prefHeight="75.0" prefWidth="150.0" text="ADD PLAYER" userData="MID" />
+        <Button layoutX="350.0" layoutY="300.0" maxWidth="Infinity" minWidth="100.0" onAction="#handleAddPlayer" prefHeight="75.0" prefWidth="150.0" text="ADD PLAYER" userData="MID" />
 
-            <!-- BAGGRUND DER SKALERER -->
-            <ImageView fx:id="backgroundImage"
-                       preserveRatio="false"
-                       smooth="true"
-                       fitWidth="${mainPane.width}"
-                       fitHeight="${mainPane.height}"
-                       AnchorPane.topAnchor="0"
-                       AnchorPane.bottomAnchor="0"
-                       AnchorPane.leftAnchor="0"
-                       AnchorPane.rightAnchor="0">
-                <image>
-                    <Image url="@images/create-your-team.jpg"/>
-                </image>
-            </ImageView>
+        <Button layoutX="200.0" layoutY="425.0" maxWidth="Infinity" minWidth="100.0" onAction="#handleAddPlayer" prefHeight="75.0" prefWidth="150.0" text="ADD PLAYER" userData="DEF" />
+        <Button layoutX="700.0" layoutY="450.0" maxWidth="Infinity" minWidth="100.0" onAction="#handleAddPlayer" prefHeight="75.0" prefWidth="150.0" text="ADD PLAYER" userData="DEF" />
+        <Button layoutX="950.0" layoutY="425.0" maxWidth="Infinity" minWidth="100.0" onAction="#handleAddPlayer" prefHeight="75.0" prefWidth="150.0" text="ADD PLAYER" userData="DEF" />
+        <Button layoutX="450.0" layoutY="450.0" maxWidth="Infinity" minWidth="100.0" onAction="#handleAddPlayer" prefHeight="75.0" prefWidth="150.0" text="ADD PLAYER" userData="DEF" />
 
-            <!-- CENTRERET HOLD + CONFIRM -->
-            <HBox spacing="60"
-                  AnchorPane.leftAnchor="0"
-                  AnchorPane.rightAnchor="0"
-                  AnchorPane.topAnchor="150"
-                  alignment="CENTER">
+        <Button layoutX="575.0" layoutY="600.0" maxWidth="Infinity" minWidth="100.0" onAction="#handleAddPlayer" prefHeight="75.0" prefWidth="150.0" text="ADD PLAYER" userData="GK" />
 
-                <!-- HELE HOLDET -->
-                <VBox spacing="70" alignment="TOP_CENTER" fx:id="buttonField" opacity="0.9">
+        <Button fx:id="confirmbutton" layoutX="1000.0" layoutY="600.0" prefHeight="50.0" prefWidth="200.0" styleClass="confirm-button" text="CONFIRM" />
 
-                    <!-- FWD -->
-                    <HBox spacing="40" alignment="CENTER">
-                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="FWD" onAction="#handleAddPlayer"/>
-                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="FWD" onAction="#handleAddPlayer"/>
-                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="FWD" onAction="#handleAddPlayer"/>
-                    </HBox>
+        <TitledPane fx:id="playerSearchPane" expanded="false" layoutX="1000.0" maxWidth="Infinity" minWidth="250.0" prefWidth="300.0" text="Search player" visible="false">
 
-                    <!-- MID -->
-                    <HBox spacing="40" alignment="CENTER">
-                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="MID" onAction="#handleAddPlayer"/>
-                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="MID" onAction="#handleAddPlayer"/>
-                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="MID" onAction="#handleAddPlayer"/>
-                    </HBox>
+            <content>
+                <VBox spacing="10">
+                    <padding>
+                        <Insets bottom="5" left="5" right="5" top="5" />
+                    </padding>
 
-                    <!-- DEF -->
-                    <HBox spacing="40" alignment="CENTER">
-                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="DEF" onAction="#handleAddPlayer"/>
-                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="DEF" onAction="#handleAddPlayer"/>
-                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="DEF" onAction="#handleAddPlayer"/>
-                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="DEF" onAction="#handleAddPlayer"/>
-                    </HBox>
+                    <TextField fx:id="searchField" prefHeight="40" />
 
-                    <!-- GK -->
-                    <HBox alignment="CENTER">
-                        <Button prefWidth="230" prefHeight="130" text="ADD PLAYER" userData="GK" onAction="#handleAddPlayer"/>
-                    </HBox>
-
+                    <TableView fx:id="playerTable" prefHeight="300">
+                        <columns>
+                            <TableColumn fx:id="nameColumn" prefWidth="172.0" text="Name" />
+                            <TableColumn fx:id="positionColumn" prefWidth="115.0" text="Position" />
+                        </columns>
+                    </TableView>
                 </VBox>
-                <TitledPane fx:id="playerSearchPane"
-                            text="Search player"
-                            expanded="false"
-                            visible="false"
-                            AnchorPane.leftAnchor="120"
-                            AnchorPane.topAnchor="300"
-                            prefWidth="600">
+            </content>
 
-                    <content>
-                        <VBox spacing="10">
-                            <padding>
-                                <Insets top="5" right="5" bottom="5" left="5"/>
-                            </padding>
-
-                            <TextField fx:id="searchField" prefHeight="40"/>
-
-                            <TableView fx:id="playerTable" prefHeight="300">
-                                <columns>
-                                    <TableColumn fx:id="nameColumn" text="Name" prefWidth="200"/>
-                                    <TableColumn fx:id="positionColumn" text="Position" prefWidth="150"/>
-                                </columns>
-                            </TableView>
-                        </VBox>
-                    </content>
-
-                </TitledPane>
-                <!-- CONFIRM -->
-                <VBox alignment="CENTER">
-                    <Button fx:id="confirmbutton"
-                            prefWidth="300" prefHeight="100"
-                            text="CONFIRM"
-                            styleClass="confirm-button"/>
-                </VBox>
-
-            </HBox>
-
-
-
-        </AnchorPane>
-
-        <!-- BUND BAR -->
-        <HBox alignment="CENTER_LEFT" spacing="5">
-            <padding>
-                <Insets top="5" right="5" bottom="5" left="5"/>
-            </padding>
-            <children>
-                <Label text="Left status"/>
-                <Pane HBox.hgrow="ALWAYS"/>
-                <Label text="Right status"/>
-            </children>
-        </HBox>
-
+        </TitledPane>
     </children>
-
-</VBox>
+</Pane>

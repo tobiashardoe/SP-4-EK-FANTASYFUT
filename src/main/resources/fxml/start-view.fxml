@@ -27,7 +27,7 @@
                        AnchorPane.leftAnchor="0"
                        AnchorPane.rightAnchor="0">
                 <image>
-                    <Image url="@images/1401126.jpg"/>
+                    <Image url="@/images/1401126.jpg"/>
                 </image>
             </ImageView>
 
