@@ -17,6 +17,7 @@ public class StartController {
     @FXML
     private void handleCreateTeam(javafx.event.ActionEvent event) {
         switchScene(event, "/fxml/create-team.fxml");
+
     }
 
 
@@ -45,8 +46,6 @@ public class StartController {
                     .getWindow();
             stage.setScene(new Scene(root));
             stage.show();
-            stage.setHeight(1080.0);
-            stage.setWidth(1920.0);
             stage.setMaximized(true);
 
         } catch (IOException e) {
