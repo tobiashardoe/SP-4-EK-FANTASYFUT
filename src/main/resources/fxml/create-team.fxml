@@ -14,7 +14,7 @@
 
 <Pane fx:id="createTeam" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  stylesheets="@buttons.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpl.gui.CreateTeamController">
    <children>
-      <ImageView id="createTeamImage" fitWidth="${createTeam.width}" fitHeight="${createTeam.height}" preserveRatio="false"  >
+      <ImageView id="createTeamImage" fitWidth="${createTeam.width}" fitHeight="${createTeam.height}" preserveRatio="false" smooth="true" >
          <image>
             <Image url="@images/createteam.jpg" />
          </image>

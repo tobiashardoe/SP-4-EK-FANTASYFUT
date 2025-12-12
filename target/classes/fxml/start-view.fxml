@@ -42,8 +42,8 @@
                   alignment="CENTER_LEFT"
                   style="-fx-padding: 20 0 0 100;">
 
-                    
-                    <Text text="EK FOOTBALL FANTASY" fill="#fffe15">
+
+                    <Text text="EK FOOTBALL FANTASY" fill="#ffffff">
                         <font>
                             <Font size="80"/>
                         </font>

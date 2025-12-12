@@ -4,11 +4,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 <AnchorPane xmlns="http://javafx.com/javafx/21"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="fpl.gui.SimulateGameweekController"
-            prefWidth="1200" prefHeight="800"
+            fx:id="SimGameWeek"
             stylesheets="@../styles/SimLayout.css">
+    <ImageView
+    id="GameWeekImage"
+    preserveRatio="false"
+    smooth="true"
+    fitWidth="${SimGameWeek.width}"
+    fitHeight="${SimGameWeek.height}">
+        <image>
+        <Image url="@images/simgameweek.jpg"/>
+    </image>
+    </ImageView>
 
     <Label text="Simulate Gameweek"
            layoutX="450" layoutY="40"
