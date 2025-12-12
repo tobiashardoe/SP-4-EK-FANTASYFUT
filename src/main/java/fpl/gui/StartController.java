@@ -92,7 +92,7 @@ public class StartController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/league-standing.fxml"));
             Parent root = loader.load();
 
-            // Get the controller of the new scene
+
             StartController controller = loader.getController();
             controller.readTotalPointsFromCSV("data/Points.csv");
 
@@ -100,6 +100,8 @@ public class StartController {
             stage.setScene(new Scene(root));
             stage.centerOnScreen();
             stage.show();
+
+            controller.showLeagueTable();
 
         } catch (IOException e) {
             e.printStackTrace();
