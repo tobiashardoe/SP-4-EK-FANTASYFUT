@@ -13,43 +13,52 @@
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <javafx.version>21.0.2</javafx.version>
     </properties>
 
     <dependencies>
 
-        <!-- JavaFX for Intel macOS -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>21.0.2</version>
-            <classifier>mac</classifier>
+            <version>${javafx.version}</version>
+            <classifier>${os.detected.classifier}</classifier>
         </dependency>
 
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>21.0.2</version>
-            <classifier>mac</classifier>
+            <version>${javafx.version}</version>
+            <classifier>${os.detected.classifier}</classifier>
         </dependency>
 
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
-            <version>21.0.2</version>
-            <classifier>mac</classifier>
+            <version>${javafx.version}</version>
+            <classifier>${os.detected.classifier}</classifier>
         </dependency>
 
         <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-base</artifactId>
-            <version>21.0.2</version>
-            <classifier>mac</classifier>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.45.2.0</version>
         </dependency>
+
 
     </dependencies>
 
     <build>
         <plugins>
+
+            <plugin>
+                <groupId>kr.motd.maven</groupId>
+                <artifactId>os-maven-plugin</artifactId>
+                <version>1.7.0</version>
+                <extensions>true</extensions>
+            </plugin>
+
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
@@ -58,6 +67,7 @@
                     <mainClass>fpl.gui.Main</mainClass>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 

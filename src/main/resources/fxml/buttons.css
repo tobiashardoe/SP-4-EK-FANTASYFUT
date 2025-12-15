@@ -1,0 +1,103 @@
+.button {
+    -fx-background-color: linear-gradient(#1d1d1d, #6c1d1d);
+    -fx-text-fill: #e6e6e6;
+    -fx-background-radius: 6;
+    -fx-font-size: 14px;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#2a2a2a, #7c2a2a);
+}
+
+.button:pressed {
+    -fx-background-color: linear-gradient(#121212, #0d0d0d);
+}
+.confirm-button {
+    -fx-background-color: linear-gradient(#2a2a2a, #145314);
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 10;
+}
+
+.confirm-button:hover {
+    -fx-background-color: linear-gradient(#2a2a2a, #22bf22);
+}
+
+.confirm-button:pressed {
+    -fx-background-color: linear-gradient(#2a2a2a, #145314);
+
+}
+
+.titled-pane {
+    -fx-text-fill: #e6e6e6;
+}
+
+.titled-pane > .title {
+    -fx-background-color: linear-gradient(#1d1d1d, #6c1d1d);
+    -fx-text-fill: #e6e6e6;
+    -fx-background-radius: 6 6 0 0;
+}
+
+.titled-pane > .content {
+    -fx-background-color: #1d1d1d;
+    -fx-background-radius: 0 0 6 6;
+}
+
+
+.text-field {
+    -fx-background-color: linear-gradient(#1d1d1d, #6c1d1d);
+    -fx-text-fill: #e6e6e6;
+    -fx-background-radius: 6;
+    -fx-prompt-text-fill: #bbbbbb;
+    -fx-border-color: transparent;
+}
+
+.text-field:focused {
+    -fx-background-color: linear-gradient(#2a2a2a, #7c2a2a);
+}
+
+
+.table-view {
+    -fx-base: #1d1d1d;
+    -fx-control-inner-background: #1d1d1d;
+    -fx-background-color: #1d1d1d;
+    -fx-table-cell-border-color: #6c1d1d;
+    -fx-text-background-color: #e6e6e6;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(#1d1d1d, #6c1d1d);
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #e6e6e6;
+}
+
+.table-row-cell {
+    -fx-text-fill: #e6e6e6;
+}
+
+.table-row-cell:filled:selected {
+    -fx-background-color: linear-gradient(#2a2a2a, #7c2a2a);
+}
+.titled-pane > .title {
+    -fx-background-color: linear-gradient(#1d1d1d, #6c1d1d);
+    -fx-padding: 6;
+    -fx-background-radius: 6 6 0 0;
+}
+
+.titled-pane > .title .label {
+    -fx-text-fill: white;
+}
+.titled-pane > .title > .arrow-button {
+    -fx-padding: 0;
+    -fx-opacity: 0;
+}
+.close-btn {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-cursor: hand;
+}
+
+.close-btn:hover {
+    -fx-text-fill: #6c1d1d;
+}
