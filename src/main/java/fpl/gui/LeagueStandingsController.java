@@ -4,6 +4,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.TableCell;
+import javafx.scene.control.Hyperlink;
 import db.LeagueStandingsDObject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -27,6 +29,8 @@ public class LeagueStandingsController {
         rankCol.setCellValueFactory(new PropertyValueFactory<>("rank"));
         userCol.setCellValueFactory(new PropertyValueFactory<>("username"));
         pointsCol.setCellValueFactory(new PropertyValueFactory<>("points"));
+
+
 
         LeagueStandingsDObject dao = new LeagueStandingsDObject();
         List<Row> rows = dao.getStandings();
