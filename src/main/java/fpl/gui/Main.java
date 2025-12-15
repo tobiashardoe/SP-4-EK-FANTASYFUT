@@ -18,6 +18,7 @@ public class Main extends Application {
         primaryStage.setTitle("EK Fantasy");
         primaryStage.setMaximized(true);
         primaryStage.show();
+        BackGroundMusic.playMusic();
     }
 
     public static void main(String[] args) {
