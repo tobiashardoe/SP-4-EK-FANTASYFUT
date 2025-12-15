@@ -8,61 +8,37 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox fx:id="mainPane"
-      xmlns="http://javafx.com/javafx/25"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="fpl.gui.StartController">
+<VBox fx:id="mainPane" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpl.gui.StartController">
 
     <children>
         <AnchorPane VBox.vgrow="ALWAYS">
 
             <!-- BAGGRUND SOM SKALERER AUTOMATISK -->
-            <ImageView id="backgroundImage"
-                       preserveRatio="false"
-                       smooth="true"
-                       fitWidth="${mainPane.width}"
-                       fitHeight="${mainPane.height}"
-                       AnchorPane.topAnchor="0"
-                       AnchorPane.bottomAnchor="0"
-                       AnchorPane.leftAnchor="0"
-                       AnchorPane.rightAnchor="0">
+            <ImageView id="backgroundImage" fitHeight="${mainPane.height}" fitWidth="${mainPane.width}" preserveRatio="false" smooth="true" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
                 <image>
-                    <Image url="@/images/1401126.jpg"/>
+                    <Image url="@/images/1401126.jpg" />
                 </image>
             </ImageView>
 
             <!-- CENTRERET CONTAINER -->
-            <VBox spacing="30"
-                  AnchorPane.leftAnchor="0"
-                  AnchorPane.rightAnchor="0"
-                  AnchorPane.topAnchor="0"
-                  AnchorPane.bottomAnchor="0"
-                  alignment="CENTER_LEFT"
-                  style="-fx-padding: 20 0 0 100;">
+            <VBox alignment="CENTER_LEFT" layoutX="-64.0" spacing="30" style="-fx-padding: 20 0 0 100;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-64.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="0.0">
 
 
-            <Text text="EK FOOTBALL FANTASY" fill="white">
+            <Text fill="white" text="EK FOOTBALL FANTASY">
                     <font>
-                        <Font size="50"/>
+                        <Font size="50" />
                     </font>
                 </Text>
 
-                <Button text="CREATE YOUR TEAM"
-                        onAction="#handleCreateTeam"
-                        prefWidth="400" prefHeight="80"/>
+                <Button onAction="#handleCreateTeam" prefHeight="80" prefWidth="400" text="CREATE YOUR TEAM" />
 
-                <Button text="SIMULATE GAMEWEEK"
-                        onAction="#handleSimulateGameweek"
-                        prefWidth="400" prefHeight="80"/>
+                <Button onAction="#handleSimulateGameweek" prefHeight="80" prefWidth="400" text="SIMULATE GAMEWEEK" />
 
-                <Button text="SEE LEAGUE STANDINGS"
-                        onAction="#handleSeeLeague"
-                        prefWidth="400" prefHeight="80"/>
+                <Button onAction="#handleSeeLeague" prefHeight="80" prefWidth="400" text="SEE LEAGUE STANDINGS" />
 
-                <Button text="EXIT"
-                        onAction="#handleExit"
-                        prefWidth="400" prefHeight="80"/>
+                <Button onAction="#handleExit" prefHeight="80" prefWidth="400" text="EXIT" />
             </VBox>
+         <Button layoutX="559.0" layoutY="14.0" mnemonicParsing="false" onAction="#LogoutMenu" text="Logout" />
 
 
         </AnchorPane>

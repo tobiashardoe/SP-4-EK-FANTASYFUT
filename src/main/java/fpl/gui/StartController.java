@@ -28,6 +28,12 @@ public class StartController {
     private void handleSeeLeague(ActionEvent event) {
         switchScene(event, "/fxml/league-standing.fxml");
     }
+    @FXML
+    private void LogoutMenu(ActionEvent event){
+        switchScene(event, "/fxml/login-view.fxml");
+
+
+    }
 
     @FXML
     private void handleCreateTeam(ActionEvent event) {
