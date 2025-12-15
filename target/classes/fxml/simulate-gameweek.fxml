@@ -1,38 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="fpl.gui.SimulateGameweekController"
-            prefWidth="1200" prefHeight="800"
-            stylesheets="@../styles/SimLayout.css">
+<AnchorPane prefHeight="800" prefWidth="1200" stylesheets="@../styles/SimLayout.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpl.gui.SimulateGameweekController">
 
-    <Label text="Simulate Gameweek"
-           layoutX="450" layoutY="40"
-           styleClass="title"/>
+    <Label layoutX="450" layoutY="40" styleClass="title" text="Simulate Gameweek" />
 
-    <Button text="Run Simulation"
-            layoutX="500" layoutY="120"
-            prefWidth="200" prefHeight="50"
-            styleClass="primary-button"
-            onAction="#handleSimulate" />
+    <Button layoutX="500" layoutY="120" onAction="#handleSimulate" prefHeight="50" prefWidth="200" styleClass="primary-button" text="Run Simulation" />
 
-    <ListView fx:id="fixtureList"
-              layoutX="150" layoutY="170"
-              prefWidth="900" prefHeight="120"
-              styleClass="card"/>
+    <ListView fx:id="fixtureList" layoutX="150" layoutY="170" prefHeight="120" prefWidth="900" styleClass="card" />
 
-    <ListView fx:id="matchResultsList"
-              layoutX="150" layoutY="300"
-              prefWidth="900" prefHeight="120"
-              styleClass="card"/>
+    <ListView fx:id="matchResultsList" layoutX="150" layoutY="300" prefHeight="120" prefWidth="900" styleClass="card" />
 
-    <TableView fx:id="resultsTable"
-               layoutX="150" layoutY="430"
-               prefWidth="900" prefHeight="350"
-               styleClass="card"/>
+    <TableView fx:id="resultsTable" layoutX="150" layoutY="430" prefHeight="350" prefWidth="900" styleClass="card" />
+   <Button layoutX="14.0" layoutY="420.0" mnemonicParsing="false" onAction="#ReturnMenu" prefHeight="6.0" prefWidth="127.0" text="Back" />
 
 </AnchorPane>

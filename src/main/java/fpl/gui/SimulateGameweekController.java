@@ -14,11 +14,18 @@ import fpl.simulation.PointsCalculator;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.*;
 
 public class SimulateGameweekController {
@@ -35,6 +42,23 @@ public class SimulateGameweekController {
         setupColumns();
         loadData();
         showFixtures();
+    }
+    private void switchScene(ActionEvent event, String fxml) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource(fxml));
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.centerOnScreen();
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void ReturnMenu(ActionEvent event){
+        switchScene(event, "/fxml/start-view.fxml");
+
+
     }
 
     private void setupColumns() {

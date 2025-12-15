@@ -7,26 +7,35 @@
 <AnchorPane xmlns="http://javafx.com/javafx/21"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="fpl.gui.LeagueStandingsController"
-            prefWidth="600" prefHeight="700">
+            prefWidth="900" prefHeight="700">
 
     <Label text="League Standings"
-           layoutX="150" layoutY="30">
+           layoutX="250" layoutY="30">
         <font><Font size="40"/></font>
     </Label>
 
     <TableView fx:id="table"
                layoutX="50" layoutY="120"
-               prefWidth="500" prefHeight="500">
-
+               prefWidth="400" prefHeight="500">
         <columns>
             <TableColumn fx:id="rankCol" text="Rank" prefWidth="80"/>
-            <TableColumn fx:id="userCol" text="User" prefWidth="250"/>
-            <TableColumn fx:id="pointsCol" text="Points" prefWidth="150"/>
+            <TableColumn fx:id="userCol" text="User" prefWidth="200"/>
+            <TableColumn fx:id="pointsCol" text="Points" prefWidth="120"/>
+        </columns>
+    </TableView>
+
+    <TableView fx:id="playersTable"
+               layoutX="470" layoutY="120"
+               prefWidth="380" prefHeight="500">
+        <columns>
+            <TableColumn fx:id="nameCol" text="Player" prefWidth="160"/>
+            <TableColumn fx:id="positionCol" text="Pos" prefWidth="80"/>
+            <TableColumn fx:id="playerPointsCol" text="Points" prefWidth="100"/>
         </columns>
     </TableView>
 
     <Button text="Back"
-            layoutX="250" layoutY="640"
+            layoutX="390" layoutY="640"
             prefWidth="120" prefHeight="40"
             onAction="#handleBack"/>
 
