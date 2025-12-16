@@ -17,7 +17,7 @@ public class BackGroundMusic {
         Platform.runLater(() -> {
             try {
                 String path = BackGroundMusic.class
-                        .getResource("/playlist/Ride.mp3")
+                        .getResource("/playlist/RedLeather-Future.mp3")
                         .toExternalForm();
 
                 Media media = new Media(path);
