@@ -7,7 +7,7 @@
 <AnchorPane fx:id="loginView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@buttons.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpl.gui.LoginController">
     <ImageView fx:id="createTeamImage"  fitWidth="${loginView.width}"  fitHeight="${loginView.height}" preserveRatio="false">
         <image>
-            <Image url="@../images/Login.jpg"/>
+            <Image url="@../images/img.png"/>
         </image>
     </ImageView>
 
