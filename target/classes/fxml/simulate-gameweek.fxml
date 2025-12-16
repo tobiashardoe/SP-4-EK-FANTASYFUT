@@ -11,7 +11,7 @@
 <AnchorPane fx:id="simWeek" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../styles/SimLayout.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpl.gui.SimulateGameweekController">
    <ImageView fitHeight="${simWeek.height}" fitWidth="${simWeek.width}" layoutX="-3.0" layoutY="2.0">
       <image>
-         <Image url="@../images/simGame.jpg" />
+         <Image url="@../images/SimGameWeek.jpg" />
       </image>
    </ImageView>
     <Label layoutX="450" layoutY="40" styleClass="title" text="Simulate Gameweek" />
