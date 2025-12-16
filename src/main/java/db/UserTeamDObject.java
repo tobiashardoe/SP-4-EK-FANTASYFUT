@@ -36,40 +36,6 @@ public class UserTeamDObject {
         }
     }
 
-    public List<Player> getPlayersForUser(String username) {
-
-        List<Player> players = new ArrayList<>();
-
-        String sql = """
-            SELECT p.id, p.name, p.position, p.clubId
-            FROM user_team ut
-            JOIN players p ON ut.playerId = p.id
-            JOIN users u ON ut.userId = u.id
-            WHERE u.username = ?
-        """;
-
-        try (Connection conn = Database.getConnection();
-             PreparedStatement ps = conn.prepareStatement(sql)) {
-
-            ps.setString(1, username);
-            ResultSet rs = ps.executeQuery();
-
-            while (rs.next()) {
-                players.add(new Player(
-                        rs.getInt("id"),
-                        rs.getString("name"),
-                        rs.getString("position"),
-                        rs.getInt("clubId")
-                ));
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return players;
-    }
-
     public List<PlayerRow> getPlayersWithPoints(String username) {
 
         List<PlayerRow> list = new ArrayList<>();

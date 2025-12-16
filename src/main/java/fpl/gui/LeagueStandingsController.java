@@ -14,7 +14,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Comparator;
-import java.util.List;
 
 public class LeagueStandingsController {
 

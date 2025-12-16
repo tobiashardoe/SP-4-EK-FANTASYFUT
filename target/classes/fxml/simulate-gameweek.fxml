@@ -6,8 +6,14 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="800" prefWidth="1200" stylesheets="@../styles/SimLayout.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpl.gui.SimulateGameweekController">
-
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane fx:id="simWeek" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../styles/SimLayout.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpl.gui.SimulateGameweekController">
+    <ImageView id="backgroundImage" fitHeight="${simWeek.height}" fitWidth="${simWeek.width}" preserveRatio="false" smooth="true" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <image>
+            <Image url="@/images/Sim.jpg" />
+        </image>
+    </ImageView>
     <Label layoutX="450" layoutY="40" styleClass="title" text="Simulate Gameweek" />
 
     <Button layoutX="500" layoutY="120" onAction="#handleSimulate" prefHeight="50" prefWidth="200" styleClass="primary-button" text="Run Simulation" />

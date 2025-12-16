@@ -4,10 +4,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/21"
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane fx:id="standings"
+        xmlns="http://javafx.com/javafx/21"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="fpl.gui.LeagueStandingsController"
-            prefWidth="900" prefHeight="700">
+            maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@/styles/SimLayout.css">
+    <ImageView id="backgroundImage" fitHeight="${standings.height}" fitWidth="${standings.width}" preserveRatio="false" smooth="true" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <image>
+            <Image url="@/images/Login.jpg" />
+        </image>
+    </ImageView>
 
     <Label text="League Standings"
            layoutX="250" layoutY="30">

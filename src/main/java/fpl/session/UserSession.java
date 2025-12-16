@@ -22,12 +22,4 @@ public class UserSession {
         return userId;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void logout() {
-        userId = null;
-        username = null;
-    }
 }

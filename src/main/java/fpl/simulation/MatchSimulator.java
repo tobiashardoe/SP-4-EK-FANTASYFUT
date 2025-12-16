@@ -77,7 +77,7 @@ public class MatchSimulator {
 
     private static int generateGoals(Random r, int attack, int defense) {
 
-        double form = 0.8 + r.nextDouble() * 0.8;  // 0.8–1.6
+        double form = 0.8 + r.nextDouble() * 0.8;
 
         double strength = ((attack * form) - (defense * 10)) / 20.0;
 
