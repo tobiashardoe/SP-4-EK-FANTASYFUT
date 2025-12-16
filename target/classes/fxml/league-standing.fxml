@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="standings" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@/styles/SimLayout.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fpl.gui.LeagueStandingsController">
-   <ImageView fitHeight="1080.0" fitWidth="1980.0" layoutY="-4.0">
+   <ImageView fitHeight="${standings.height}" fitWidth="${standings.width}" layoutY="-4.0">
       <image>
          <Image url="@.././images/vini.jpg" />
       </image>
