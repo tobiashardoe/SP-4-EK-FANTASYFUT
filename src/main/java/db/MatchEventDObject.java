@@ -1,7 +1,6 @@
 package db;
 
 import java.sql.*;
-import fpl.simulation.PlayerPerformance;
 
 public class MatchEventDObject {
 

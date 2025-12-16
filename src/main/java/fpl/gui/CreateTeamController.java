@@ -15,7 +15,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
@@ -166,11 +165,4 @@ public class CreateTeamController {
         a.showAndWait();
     }
 
-    private void showInfo(String t, String m) {
-        Alert a = new Alert(Alert.AlertType.INFORMATION);
-        a.setTitle(t);
-        a.setHeaderText(null);
-        a.setContentText(m);
-        a.showAndWait();
-    }
 }

@@ -13,14 +13,12 @@
     <children>
         <AnchorPane VBox.vgrow="ALWAYS">
 
-            <!-- BAGGRUND SOM SKALERER AUTOMATISK -->
             <ImageView id="backgroundImage" fitHeight="${mainPane.height}" fitWidth="${mainPane.width}" preserveRatio="false" smooth="true" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
                 <image>
                     <Image url="@/images/1401126.jpg" />
                 </image>
             </ImageView>
 
-            <!-- CENTRERET CONTAINER -->
             <VBox alignment="CENTER_LEFT" layoutX="-64.0" spacing="30" style="-fx-padding: 20 0 0 100;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-64.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="0.0">
             <Button mnemonicParsing="false" onAction="#LogoutMenu" text="Logout" />
 
