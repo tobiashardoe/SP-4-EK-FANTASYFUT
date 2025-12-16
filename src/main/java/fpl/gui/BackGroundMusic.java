@@ -10,7 +10,6 @@ public class BackGroundMusic {
 
     public static void playMusic() {
 
-        // Prevent double initialization
         if (mediaPlayer != null) {
             return;
         }
