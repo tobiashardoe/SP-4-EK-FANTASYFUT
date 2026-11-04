@@ -21,3 +21,15 @@ Ved nulstilling må brugerkonti samt spiller- og klubdata ikke slettes, og den a
 Systemet skal give brugeren tydelig feedback ved succesfulde handlinger og fejl samt sikre datakonsistens ved alle ændringer.
 
 
+
+## Webversion
+
+Projektet har nu et separat webmodul i `web/`, der genbruger Java-modellerne og
+simulationslogikken fra desktop-appen.
+
+- Live: https://fantasyfut.antwi.dk
+- Byg og test fra projektroden: `mvn -f web/pom.xml package`
+- Start lokalt: `java -jar web/target/fantasyfut-web.jar`
+- Åbn http://localhost:7080
+
+Se [web/README.md](web/README.md) for spilleregler, database, Docker og deployment.
