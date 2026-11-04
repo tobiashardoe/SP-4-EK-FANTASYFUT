@@ -13,7 +13,10 @@ mvn -f web/pom.xml package
 java -jar web/target/fantasyfut-web.jar
 ```
 
-Open http://localhost:7080. Create an account with a unique demo password, select
+Open http://localhost:7080. The original JavaFX-inspired design is available at
+http://localhost:7080/classic.html (production: https://fantasyfut.antwi.dk/classic.html).
+It uses the same accounts, lineup and results as the main web interface, with the
+original project backgrounds and menu structure. Create an account with a unique demo password, select
 or quick-pick a 4–4–2 squad, save it, and simulate your first gameweek.
 
 `SERVER_ORIGIN` is the exact browser origin used for CSRF checks. It defaults to
