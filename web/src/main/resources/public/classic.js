@@ -8,7 +8,7 @@ function classicScreen(name) {
   classicMenu.hidden=!menu;
   classicBar.hidden=menu;
   if(!menu) document.querySelector('#classic-screen-name').textContent=screenTitles[name];
-  document.title=(menu?'EK Football Fantasy':screenTitles[name])+' — Original look';
+  document.title=(menu?'EK Football Fantasy':screenTitles[name]);
 }
 document.querySelectorAll('.view').forEach(el=>el.hidden=true);
 document.querySelectorAll('[data-screen-target]').forEach(button=>button.addEventListener('click',()=>{

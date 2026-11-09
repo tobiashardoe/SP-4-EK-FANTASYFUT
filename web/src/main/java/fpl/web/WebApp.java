@@ -82,6 +82,7 @@ public final class WebApp {
             if(!"RESET".equals(ctx.bodyAsClass(ResetRequest.class).confirmation())) throw new BadRequestResponse("Type RESET to confirm.");
             store.reset(id); ctx.json(Map.of("ok",true));
         });
+        app.get("/classic.html", ctx -> ctx.redirect("/", HttpStatus.MOVED_PERMANENTLY));
         app.get("/health",ctx -> ctx.json(Map.of("status","ok")));
         app.exception(GameStore.Invalid.class,(e,ctx) -> ctx.status(400).json(Map.of("message",e.getMessage())));
         app.exception(HttpResponseException.class,(e,ctx) -> ctx.status(e.getStatus()).json(Map.of("message",e.getMessage())));
